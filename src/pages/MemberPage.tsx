@@ -3,6 +3,7 @@ import WorkChangeSection from "../components/member/WorkChangeSection";
 import YourActionSection from "../components/member/YourActionSection";
 import BelongingSection from "../components/member/BelongingSection";
 import FutureSection from "../components/member/FutureSection";
+import CTASection from "../components/member/CTASection";
 
 const MemberPage: React.FC = () => {
     return (
@@ -12,6 +13,7 @@ const MemberPage: React.FC = () => {
             <BelongingSection />
             <YourActionSection />
             <FutureSection />
+            <CTASection />
         </div>
     );
 };
