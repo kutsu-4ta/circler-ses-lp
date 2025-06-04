@@ -7,6 +7,7 @@ import Strategy from './components/Strategy';
 import Tactics from './components/Tactics';
 import Plan from './components/Plan';
 import Footer from './components/Footer';
+import MemberPage from "./pages/MemberPage";
 
 function Container({ children }: { children: React.ReactNode }) {
     return (
@@ -25,19 +26,6 @@ function HomePage() {
                 <Footer />
             </Container>
         </div>
-    );
-}
-
-function MembersPage() {
-    return (
-        <Container>
-            <Container>
-                <Strategy/>
-            </Container>
-            <Container>
-                <Tactics/>
-            </Container>
-        </Container>
     );
 }
 
@@ -69,7 +57,7 @@ export default function App() {
                 <main className="flex-grow">
                     <Routes>
                         <Route path="/" element={<HomePage/>}/>
-                        <Route path="/members" element={<MembersPage/>}/>
+                        <Route path="/members" element={<MemberPage/>}/>
                         <Route path="/leaders" element={<LeadersPage/>}/>
                         <Route path="/aboutUs" element={<AboutUs/>}/>
                     </Routes>
