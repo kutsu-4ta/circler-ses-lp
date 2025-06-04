@@ -21,7 +21,7 @@ export default function Nav() {
                     } md:flex md:space-x-6 text-sm font-medium text-blue-700 md:items-center md:static absolute bg-white left-0 top-full w-full md:w-auto md:bg-transparent`}
                 >
                     <li className="border-b md:border-none">
-                        <Link to="/" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
+                        <Link to="/aboutUs" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
                             私たちについて
                         </Link>
                     </li>
