@@ -3,10 +3,10 @@ export default function Hero() {
     return (
         <section className="bg-blue-50 py-16  text-center">
             <div className="container mx-auto">
-                <h1 className="text-4xl font-bold text-blue-800 mb-4">人財育成計画のご紹介</h1>
+                <h1 className="text-4xl font-bold text-blue-800 mb-4">行動変容の取り組みのご紹介</h1>
                 <p className="text-lg text-gray-700">
-                    私たちが目指すのは、<strong>「提案できるSE」</strong>の育成です。<br />
-                    このページでは、組織課題を乗り越えるための人財戦略と、
+                    私たちが目指すのは、<strong>文化資本</strong>の構造化です。<br />
+                    この資料では、組織課題を乗り越えるための人財戦略と、
                     それを支える育成サイクルについて説明します。
                 </p>
             </div>
