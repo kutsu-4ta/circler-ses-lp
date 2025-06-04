@@ -1,0 +1,15 @@
+// Hero.tsx
+export default function Hero() {
+    return (
+        <section className="bg-blue-50 py-16 px-6 text-center">
+            <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+                <h1 className="text-4xl font-bold text-blue-800 mb-4">人財育成計画のご紹介</h1>
+                <p className="text-lg text-gray-700">
+                    私たちが目指すのは、<strong>「提案できるSE」</strong>の育成です。<br />
+                    このページでは、組織課題を乗り越えるための人財戦略と、
+                    それを支える育成サイクルについて説明します。
+                </p>
+            </div>
+        </section>
+    );
+}
