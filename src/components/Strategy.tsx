@@ -1,8 +1,8 @@
 // Strategy.tsx
 export default function Strategy() {
     return (
-        <section className="bg-gray-50 py-16 px-6">
-            <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        <section className="bg-gray-50 py-16 ">
+            <div className="container mx-auto">
                 <h2 className="text-3xl font-semibold text-blue-700 mb-6">戦略：サーキュラーSESによる人財循環</h2>
                 <p className="text-gray-800 mb-4">
                     私たちのビジョンは、<strong>「提案できるSE」を育て、循環させる仕組み</strong>の構築です。これは単なるスキル育成ではなく、<strong>価値創出に関与する人財の連鎖</strong>を目指しています。

@@ -21,24 +21,24 @@ export default function Nav() {
                     } md:flex md:space-x-6 text-sm font-medium text-blue-700 md:items-center md:static absolute bg-white left-0 top-full w-full md:w-auto md:bg-transparent`}
                 >
                     <li className="border-b md:border-none">
-                        <Link to="/" className="block px-4 py-2 hover:underline" onClick={() => setIsOpen(false)}>
+                        <Link to="/" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
                             私たちについて
                         </Link>
                     </li>
                     <li className="border-b md:border-none">
-                        <Link to="/members" className="block px-4 py-2 hover:underline" onClick={() => setIsOpen(false)}>
+                        <Link to="/members" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
                             メンバーの方へ
                         </Link>
                     </li>
                     <li className="border-b md:border-none">
-                        <Link to="/leaders" className="block px-4 py-2 hover:underline" onClick={() => setIsOpen(false)}>
+                        <Link to="/leaders" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
                             経営層の方へ
                         </Link>
                     </li>
                     <li>
                         <a
                             href="#contact"
-                            className="block px-4 py-2 hover:bg-blue-700 hover:text-white border border-blue-700 rounded md:inline transition"
+                            className="block px-2 py-2 hover:bg-blue-700 hover:text-white border border-blue-700 rounded md:inline transition"
                             onClick={() => setIsOpen(false)}
                         >
                             話を聞きたい

@@ -1,8 +1,8 @@
 // Tactics.tsx
 export default function Tactics() {
     return (
-        <section className="bg-white py-16 px-6">
-            <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        <section className="bg-white py-16 ">
+            <div className="container mx-auto">
                 <h2 className="text-3xl font-semibold text-blue-700 mb-6">戦術：内製による育成の仕組み</h2>
                 <p className="text-gray-800 mb-4">
                     私たちは、育成サイクルを<strong>「GROWモデル」</strong>に基づいて設計し、行動変容を伴う人財育成を目指しています。

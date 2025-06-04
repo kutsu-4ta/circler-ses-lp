@@ -1,8 +1,8 @@
 // Background.tsx
 export default function Background() {
     return (
-        <section className="bg-white py-16 px-6">
-            <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        <section className="bg-white py-16">
+            <div className="container mx-auto">
                 <h2 className="text-3xl font-semibold text-blue-700 mb-6">なぜ今、人財育成なのか？</h2>
                 <p className="text-gray-800 mb-4">
                     私たちの組織には、以下のような課題が存在しています：

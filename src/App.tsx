@@ -1,5 +1,5 @@
 // App.tsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Background from './components/Background';
@@ -9,22 +9,22 @@ import Plan from './components/Plan';
 import Footer from './components/Footer';
 
 function Container({ children }: { children: React.ReactNode }) {
-    return <div className="container mx-auto px-4 sm:px-6 lg:px-8">{children}</div>;
+    return (
+        <div className="w-full px-0 xl:container xl:mx-auto">
+            {children}
+        </div>
+    );
 }
 
 function HomePage() {
     return (
-        <Container>
+        <div>
             <Container>
                 <Hero />
-            </Container>
-            <Container>
                 <Background />
-            </Container>
-            <Container>
                 <Footer />
             </Container>
-        </Container>
+        </div>
     );
 }
 
@@ -32,13 +32,13 @@ function MembersPage() {
     return (
         <Container>
             <Container>
-                <Strategy />
+                <Strategy/>
             </Container>
             <Container>
-                <Tactics />
+                <Tactics/>
             </Container>
             <Container>
-                <Footer />
+                <Footer/>
             </Container>
         </Container>
     );
@@ -48,10 +48,10 @@ function LeadersPage() {
     return (
         <Container>
             <Container>
-                <Plan />
+                <Plan/>
             </Container>
             <Container>
-                <Footer />
+                <Footer/>
             </Container>
         </Container>
     );
@@ -60,13 +60,13 @@ function LeadersPage() {
 export default function App() {
     return (
         <Router>
-            <div className="min-h-screen flex flex-col">
-                <Nav />
+            <div className="min-h-screen flex flex-col overflow-x-hidden">
+                <Nav/>
                 <main className="flex-grow">
                     <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        {/*<Route path="/members" element={<MembersPage />} />*/}
-                        {/*<Route path="/leaders" element={<LeadersPage />} />*/}
+                        <Route path="/" element={<HomePage/>}/>
+                        {/*<Route path="/members" element={<MembersPage/>}/>*/}
+                        {/*<Route path="/leaders" element={<LeadersPage/>}/>*/}
                     </Routes>
                 </main>
             </div>
