@@ -37,9 +37,6 @@ function MembersPage() {
             <Container>
                 <Tactics/>
             </Container>
-            <Container>
-                <Footer/>
-            </Container>
         </Container>
     );
 }
@@ -50,8 +47,15 @@ function LeadersPage() {
             <Container>
                 <Plan/>
             </Container>
+        </Container>
+    );
+}
+
+function AboutUs() {
+    return (
+        <Container>
             <Container>
-                <Footer/>
+                <Plan/>
             </Container>
         </Container>
     );
@@ -65,10 +69,12 @@ export default function App() {
                 <main className="flex-grow">
                     <Routes>
                         <Route path="/" element={<HomePage/>}/>
-                        {/*<Route path="/members" element={<MembersPage/>}/>*/}
-                        {/*<Route path="/leaders" element={<LeadersPage/>}/>*/}
+                        <Route path="/members" element={<MembersPage/>}/>
+                        <Route path="/leaders" element={<LeadersPage/>}/>
+                        <Route path="/aboutUs" element={<AboutUs/>}/>
                     </Routes>
                 </main>
+                <Footer/>
             </div>
         </Router>
     );
