@@ -11,7 +11,7 @@ export default function Footer() {
                     ご不明な点やご意見があれば、お気軽に担当者までお知らせください。
                 </p>
                 <p className="text-sm text-blue-200">
-                    作成者：行動変容の取り組み サーキュラーSES構想
+                    作成者：人財育成計画 サーキュラーSES構想
                 </p>
             </div>
         </footer>

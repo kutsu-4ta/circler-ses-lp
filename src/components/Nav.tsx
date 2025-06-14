@@ -8,7 +8,7 @@ export default function Nav() {
     return (
         <nav className="bg-white shadow-md py-4 px-6 sticky top-0 z-50">
             <div className="max-w-6xl mx-auto flex justify-between items-center">
-                <div className="text-blue-800 text-xl font-bold">行動変容の取り組み</div>
+                <div className="text-blue-800 text-xl font-bold">人財育成計画</div>
                 <button
                     className="md:hidden text-blue-800 focus:outline-none"
                     onClick={() => setIsOpen(!isOpen)}
