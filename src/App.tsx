@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Background from './components/Background';
-import Plan from './components/Plan';
 import Footer from './components/Footer';
 import MemberPage from "./pages/MemberPage";
 import LeadershipPage from "./pages/LeadershipPage";
@@ -13,6 +12,7 @@ import InvestmentDetails from "./components/leadership/details/InvestmentDetails
 import LogicDetails from "./components/leadership/details/LogicDetails";
 import AboutUsPage from "./pages/AboutUsPage";
 import ServicePage from "./pages/ServicePage";
+import FunctionalItemPage from "./pages/FunctionalItemPage";
 
 function Container({children}: { children: React.ReactNode }) {
     return (
@@ -45,13 +45,14 @@ export default function App() {
                         <Route path="/members" element={<MemberPage/>}/>
                         <Route path="/leaders" element={<LeadershipPage/>}/>
                         <Route path="/services" element={<ServicePage/>}/>
+                        <Route path="/functions" element={<FunctionalItemPage/>}/>
                         <Route path="/aboutUs" element={<AboutUsPage/>}/>
 
-                        {/*経営向け 詳細ページ*/}
-                        <Route path="/leaders/details/challenge" element={<ChallengeDetails/>}/>
-                        <Route path="/leaders/details/logic" element={<LogicDetails/>}/>
-                        <Route path="/leaders/details/investment" element={<InvestmentDetails/>}/>
-                        <Route path="/leaders/details/executive" element={<ExecutiveRoleDetails/>}/>
+                        {/*経営向け 外部背景*/}
+                        <Route path="/column/challenge" element={<ChallengeDetails/>}/>
+                        <Route path="/column/logic" element={<LogicDetails/>}/>
+                        <Route path="/column/investment" element={<InvestmentDetails/>}/>
+                        <Route path="/column/executive" element={<ExecutiveRoleDetails/>}/>
                     </Routes>
                 </main>
                 <Footer/>

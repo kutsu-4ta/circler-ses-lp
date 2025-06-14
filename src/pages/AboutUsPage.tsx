@@ -1,6 +1,5 @@
 import Plan from "../components/Plan";
 import CultureQuote from "../components/aboutus/CultureQuote";
-import TeamMessage from "../components/aboutus/TeamMessage";
 import MvvSection from "../components/aboutus/MvvSection";
 
 const AboutUsPage: React.FC = () => {

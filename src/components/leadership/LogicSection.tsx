@@ -38,7 +38,7 @@ const LogicSection: React.FC = () => (
             </div>
 
             <div className="mt-10">
-                <Link to="/leaders/details/logic">
+                <Link to="/column/logic">
                     <button className="px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
                         モデルの詳細をもっと見る
                     </button>

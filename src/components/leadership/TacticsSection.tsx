@@ -37,7 +37,7 @@ const TacticsSection: React.FC = () => (
             </div>
 
             <div className="mt-10">
-                <Link to="/leaders/details/tactics">
+                <Link to="/column/tactics">
                     <button className="px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
                         実行プランをもっと詳しく見る
                     </button>

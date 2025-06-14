@@ -39,7 +39,7 @@ const ChallengeSection: React.FC = () => (
             </div>
 
             <div className="mt-10">
-                <Link to="/leaders/details/challenge">
+                <Link to="/column/challenge">
                     <button className="px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
                         背景の構造をもっと見る
                     </button>

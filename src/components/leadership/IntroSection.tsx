@@ -2,7 +2,8 @@ const IntroSection: React.FC = () => (
     <div className="bg-gray-100 py-24 px-6 sm:px-12 text-gray-900">
         <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-indigo-800 mb-6 leading-tight">
-                「人が育つ構造」こそが、SESを超えるブランディング戦略。
+                「人が育つ構造」こそが、<br/>
+                SESを超えるブランディング戦略。
             </h1>
             <p className="text-xl sm:text-2xl mb-6 leading-relaxed text-gray-700">
                 離職率の増加、モチベーション低下、SEの評価と成果の分断——。

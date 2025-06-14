@@ -20,11 +20,6 @@ export default function Nav() {
                         isOpen ? 'block' : 'hidden'
                     } md:flex md:space-x-6 text-sm font-medium text-blue-700 md:items-center md:static absolute bg-white left-0 top-full w-full md:w-auto md:bg-transparent`}
                 >
-                    <li className="border-b md:border-none">
-                        <Link to="/aboutUs" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
-                            TUNEについて
-                        </Link>
-                    </li>
                     {/*<li className="border-b md:border-none">*/}
                     {/*    <Link to="/members" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>*/}
                     {/*        メンバーの方へ*/}
@@ -38,6 +33,16 @@ export default function Nav() {
                     <li className="border-b md:border-none">
                         <Link to="/services" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
                             サービス
+                        </Link>
+                    </li>
+                    <li className="border-b md:border-none">
+                        <Link to="/functions" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
+                            機能
+                        </Link>
+                    </li>
+                    <li className="border-b md:border-none">
+                        <Link to="/aboutUs" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
+                            TUNEについて
                         </Link>
                     </li>
                     <li className="border-b md:border-none">
