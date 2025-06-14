@@ -2,7 +2,7 @@ const FounderCard: React.FC = () => {
     const leaderName = "山下 将史";
     const organizeName = "TUNE";
     return (
-        <div className="bg-white rounded-2xl shadow-lg p-8 mt-16 max-w-3xl mx-auto flex flex-col md:flex-row items-center md:items-start">
+        <div className="bg-white rounded-2xl shadow-lg p-8 max-w-3xl mx-auto flex flex-col md:flex-row items-center md:items-start">
             {/* 画像エリア（仮写真） */}
             <div className="w-32 h-32 rounded-full overflow-hidden bg-indigo-100 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
                 {/* 写真を入れたい場合： <img src="/path/to/profile.jpg" alt="代表写真" className="w-full h-full object-cover" /> */}

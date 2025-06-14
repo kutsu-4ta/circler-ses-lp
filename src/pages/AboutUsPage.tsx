@@ -6,7 +6,7 @@ const AboutUsPage: React.FC = () => {
     return (
         <div className="font-sans text-gray-800 bg-gradient-to-br from-white to-blue-50 min-h-screen">
             <MvvSection />
-            <FounderCard />
+            <FounderCard className="bg-indigo-50 py-24 px-4 rounded-t-3xl shadow-inner"/>
             <AboutMeSection />
         </div>
     );
