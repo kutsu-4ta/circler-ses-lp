@@ -9,12 +9,11 @@ interface VennDiagramProps {
 const VennDiagram: React.FC<VennDiagramProps> = ({ overlap }) => {
     const { wc, wm, cm } = overlap;
 
-    const centerX = 180; // 少し右に余裕を持たせた中央
+    const centerX = 180;
     const centerY = 130;
+    const radius = 80;
 
-    const radius = 80; // w-40 = 160px の半分
-
-    // 各円の位置を算出（中心基準）
+    // 各円の位置調整（中心基準 + 半径分左に補正）
     const willX = centerX - wc / 2 - radius;
     const willY = centerY;
 
@@ -32,21 +31,23 @@ const VennDiagram: React.FC<VennDiagramProps> = ({ overlap }) => {
                     className="absolute w-40 h-40 bg-indigo-400 rounded-full opacity-60 flex justify-center items-center text-black text-sm font-semibold"
                     style={{ top: willY, left: willX }}
                 >
-                    Will（志向）
+                    Will（やりたいこと）
                 </div>
+
                 {/* Can */}
                 <div
                     className="absolute w-40 h-40 bg-green-400 rounded-full opacity-60 flex justify-center items-center text-black text-sm font-semibold"
                     style={{ top: canY, left: canX }}
                 >
-                    Can（強み）
+                    Can（できること）
                 </div>
+
                 {/* Must */}
                 <div
                     className="absolute w-40 h-40 bg-yellow-400 rounded-full opacity-60 flex justify-center items-center text-black text-sm font-semibold"
                     style={{ top: mustY, left: mustX }}
                 >
-                    Must（ニーズ）
+                    Must（やらないといけないこと）
                 </div>
             </div>
         </div>

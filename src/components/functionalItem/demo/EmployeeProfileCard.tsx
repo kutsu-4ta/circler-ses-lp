@@ -32,15 +32,15 @@ const EmployeeProfileCard: React.FC = () => {
                 {/* スキル比較 */}
                 <div className="grid sm:grid-cols-2 gap-6 bg-indigo-50 border-t px-6 py-4">
                     <div>
-                        <h3 className="text-md font-semibold text-indigo-700 mb-2">👣 現場で身についてきたこと</h3>
-                        <div className="text-sm text-gray-800 space-y-1">
+                        <h3 className="text-md font-semibold text-indigo-700 mb-2 text-left">👣 現場で身についてきたこと</h3>
+                        <div className="text-sm text-gray-800 space-y-1 text-left">
                             <p><strong>🧰 ハードスキル：</strong>Next.js / Tailwind / Figma</p>
                             <p><strong>💡 ソフトスキル：</strong>仕様整理力 / タスク分解 / ペアプロでのナレッジ共有</p>
                         </div>
                     </div>
                     <div>
-                        <h3 className="text-md font-semibold text-indigo-700 mb-2">🎯 目標に書いた成長イメージ</h3>
-                        <div className="text-sm text-gray-800 space-y-1">
+                        <h3 className="text-md  font-semibold text-indigo-700 mb-2 text-left">🎯 目標に書いた成長イメージ</h3>
+                        <div className="text-sm text-gray-800 space-y-1 text-left">
                             <p><strong>🧰 ハードスキル：</strong>UI設計力 / サーバー設計（API設計）</p>
                             <p><strong>💡 ソフトスキル：</strong>提案資料づくり / チームの巻き込み / セルフマネジメント</p>
                         </div>

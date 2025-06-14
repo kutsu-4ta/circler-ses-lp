@@ -40,25 +40,37 @@ const tools: Tool[] = [
         </div>,
     },
     {
-        title: '🎯 Will・Can・Mustアクションシート',
-        desc: '強み・志向・現場ニーズを言語化し、提案材料や評価軸として活用。',
+        title: '洞察を引き出す『Will・Can・Must』',
+        desc: '強み・志向・現場ニーズを言語化し、自身の成長のための分析ツール、営業の提案材料としても活用される。\n' + '言語化できない暗黙知も、直感的に伝えられるのが特長。',
         modalContent:
             <div>
                 <div className="px-6 py-6 bg-white border-t text-left text-sm text-gray-700 space-y-4">
                     <div>
                         <h3 className="text-md font-semibold text-indigo-700 mb-1">🔍 機能の目的</h3>
                         <ul className="list-disc list-inside space-y-1">
-                            <li>帰属意識の状態（例：待遇に対する不満）と照らし合わせて、<strong>“納得”できるかを判断</strong>できる。</li>
-                            <li>現在のスキル体験をもとに、<strong>成長の方向性を自己決定</strong>できるようにする。</li>
-                            <li>ギャップを「埋めるためのToDo」ではなく、<strong>「価値の再定義」</strong>として扱う。</li>
+                            <li><strong>非言語の実感</strong>を可視化し、キャリア支援や1on1の土台にする。</li>
+                            <li><strong>本人の内的動機と、現場・組織の期待を接続</strong>する対話の起点をつくる。</li>
+                            <li><strong>Will・Can・Mustのズレ</strong>から、異動・単価交渉・成長の方向性を探る。</li>
+                            <li><strong>主観メモとフィードバック</strong>の両面から、自己認識と他者評価のギャップに気づく。</li>
+                            <li><strong>帰属意識などの定量データ</strong>とも照合し、納得感あるキャリア支援へつなげる。</li>
                         </ul>
                     </div>
+
                     <div>
                         <h3 className="text-md font-semibold text-indigo-700 mb-1">💡 UIの意図する伝え方</h3>
                         <ul className="list-disc list-inside space-y-1">
-                            <li>スキルの羅列ではなく、<strong>「今の現場で得られている楽しさ vs 理想の追求」</strong>の両立を視覚化。</li>
-                            <li>「待遇が1だけど、構成員との関係性が強い」→ 無理な配置転換よりも、今の信頼関係を活かした提案へ。</li>
-                            <li>戦略的成長とは、“ギャップを埋めること”ではなく、<strong>“構造的な納得感”</strong>を生むこと。</li>
+                            <li>円をドラッグすることで<strong>「なんとなくこの辺」</strong>という直感的な配置が可能。</li>
+                            <li>
+                                重なり具合で傾向が可視化される：
+                                <ul className="list-disc list-inside ml-5 mt-1 space-y-1 text-gray-600">
+                                    <li><strong>コツコツ型</strong>：Can × Must</li>
+                                    <li><strong>奔放型</strong>：Will × Can</li>
+                                    <li><strong>夢追い型</strong>：Will × Must</li>
+                                </ul>
+                            </li>
+                            <li>配置後に<strong>本人メモ</strong>を入力し、非言語感覚を言語化して補足。</li>
+                            <li><strong>フィードバック欄</strong>で、現場・営業・自社の視点を可視化。</li>
+                            <li><strong>自己評価と他者評価のズレ</strong>が見えることで、対話が深まる。</li>
                         </ul>
                     </div>
                 </div>
