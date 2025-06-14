@@ -4,7 +4,6 @@ import LogicSection from '../components/leadership/LogicSection';
 import TacticsSection from '../components/leadership/TacticsSection';
 import ExecutiveCTA from '../components/leadership/ExecutiveCTA';
 import BrandingVisionSection from "../components/leadership/BrandingVisionSection";
-import { Link } from "react-router-dom";
 
 const LeadershipPage: React.FC = () => {
     return (

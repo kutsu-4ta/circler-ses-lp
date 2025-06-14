@@ -36,7 +36,7 @@ export default function Nav() {
                         </Link>
                     </li>
                     <li className="border-b md:border-none">
-                        <Link to="/products" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
+                        <Link to="/services" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
                             サービス
                         </Link>
                     </li>

@@ -12,6 +12,7 @@ import ChallengeDetails from "./components/leadership/details/ChallengeDetails";
 import InvestmentDetails from "./components/leadership/details/InvestmentDetails";
 import LogicDetails from "./components/leadership/details/LogicDetails";
 import AboutUsPage from "./pages/AboutUsPage";
+import ServicePage from "./pages/ServicePage";
 
 function Container({children}: { children: React.ReactNode }) {
     return (
@@ -43,7 +44,9 @@ export default function App() {
                         <Route path="/" element={<HomePage/>}/>
                         <Route path="/members" element={<MemberPage/>}/>
                         <Route path="/leaders" element={<LeadershipPage/>}/>
+                        <Route path="/services" element={<ServicePage/>}/>
                         <Route path="/aboutUs" element={<AboutUsPage/>}/>
+
                         {/*経営向け 詳細ページ*/}
                         <Route path="/leaders/details/challenge" element={<ChallengeDetails/>}/>
                         <Route path="/leaders/details/logic" element={<LogicDetails/>}/>
