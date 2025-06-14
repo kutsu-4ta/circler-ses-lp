@@ -1,6 +1,4 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import BackToColumnButton from "./BackToColumnButton";
 
 const ColumnCTA: React.FC = () => (
     <section className="py-24 px-4 bg-indigo-50">
