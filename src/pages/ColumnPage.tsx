@@ -27,6 +27,26 @@ const columnArticles = [
         title: 'カルチャーフィット採用の設計',
         description: 'コンピテンシーと社員カルテに基づき、文化に共鳴する人を採用・定着・活躍へ導く戦略を説明します。',
     },
+    {
+        id: 'self-efficacy',
+        title: '組織効力感という“空気”を育てるには',
+        description: '組織に漂う「できそう」「信頼できる」という空気感を、どうやって戦略的に育てていくかを解説します。',
+    },
+    {
+        id: 'self-mutual-public-aid',
+        title: '自助・共助・公助で組織は循環する',
+        description: '1on1・評価制度・ツール活用を通じて、支援構造がどのように循環を生むかを整理します。',
+    },
+    {
+        id: 'internal-branding',
+        title: '社内ブランディングは“文化資本”から始まる',
+        description: '文化としてのMVVを社内に根付かせるために、日常的な言語化と共有がどれほど重要かを語ります。',
+    },
+    {
+        id: 'will-can-must',
+        title: 'Will・Can・Mustを使った目標設計論',
+        description: '社員と会社の意志・能力・期待の重なりから目標をつくるフレームワークの実践例を紹介します。',
+    },
 ];
 
 const ColumnPage: React.FC = () => {

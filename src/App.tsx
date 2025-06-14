@@ -15,6 +15,10 @@ import BelongingTheoryDetail from "./components/column/details/BelongingTheoryDe
 import RecruitmentValueDetail from "./components/column/details/RecruitmentValueDetail";
 import InternalVisionDetail from "./components/column/details/InternalVisionDetail";
 import ExternalFactorsDetail from "./components/column/details/ExternalFactorsDetail";
+import SelfMutualPublicAidDetail from "./components/column/details/SelfMutualPublicAidDetail";
+import InternalBrandingDetail from "./components/column/details/InternalBrandingDetail";
+import WillCanMustDetail from "./components/column/details/WillCanMustDetail";
+import SelfEfficacyDetail from "./components/column/details/SelfEfficacyDetail";
 
 function Container({children}: { children: React.ReactNode }) {
     return (
@@ -51,12 +55,16 @@ export default function App() {
                         <Route path="/column" element={<ColumnPage/>}/>
                         <Route path="/aboutUs" element={<AboutUsPage/>}/>
 
-                        {/*コラム 人事リテラシーの提供記事*/}
+                        {/* コラム 人事リテラシーの提供記事 */}
                         <Route path="/column/external-factors" element={<ExternalFactorsDetail />} />
                         <Route path="/column/motivation-theory" element={<MotivationTheoryDetail />} />
                         <Route path="/column/belonging-theory" element={<BelongingTheoryDetail />} />
                         <Route path="/column/internal-vision" element={<InternalVisionDetail />} />
                         <Route path="/column/recruitment-value" element={<RecruitmentValueDetail />} />
+                        <Route path="/column/self-efficacy" element={<SelfEfficacyDetail />} />
+                        <Route path="/column/self-mutual-public-aid" element={<SelfMutualPublicAidDetail />} />
+                        <Route path="/column/internal-branding" element={<InternalBrandingDetail />} />
+                        <Route path="/column/will-can-must" element={<WillCanMustDetail />} />
                     </Routes>
                 </main>
                 <Footer/>
