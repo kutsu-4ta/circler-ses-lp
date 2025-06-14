@@ -3,7 +3,7 @@ const FunctionalIntroSection: React.FC = () => (
         <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-indigo-800 mb-6">
                 理念だけでは、変革は進まない。<br className="hidden sm:inline" />
-                「育つ構造」を支える道具が、ここにある。
+                「育つ構造」を支える道具がここにある。
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
                 “提案できるSE”や“循環型組織”は、抽象概念ではありません。<br />

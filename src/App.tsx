@@ -6,13 +6,15 @@ import Background from './components/Background';
 import Footer from './components/Footer';
 import MemberPage from "./pages/MemberPage";
 import LeadershipPage from "./pages/LeadershipPage";
-import ExecutiveRoleDetails from "./components/leadership/details/ExecutiveRoleDetails";
-import ChallengeDetails from "./components/leadership/details/ChallengeDetails";
-import InvestmentDetails from "./components/leadership/details/InvestmentDetails";
-import LogicDetails from "./components/leadership/details/LogicDetails";
 import AboutUsPage from "./pages/AboutUsPage";
 import ServicePage from "./pages/ServicePage";
 import FunctionalItemPage from "./pages/FunctionalItemPage";
+import ColumnPage from "./pages/ColumnPage";
+import MotivationTheoryDetail from "./components/column/details/MotivationTheoryDetail";
+import BelongingTheoryDetail from "./components/column/details/BelongingTheoryDetail";
+import RecruitmentValueDetail from "./components/column/details/RecruitmentValueDetail";
+import InternalVisionDetail from "./components/column/details/InternalVisionDetail";
+import ExternalFactorsDetail from "./components/column/details/ExternalFactorsDetail";
 
 function Container({children}: { children: React.ReactNode }) {
     return (
@@ -46,13 +48,15 @@ export default function App() {
                         <Route path="/leaders" element={<LeadershipPage/>}/>
                         <Route path="/services" element={<ServicePage/>}/>
                         <Route path="/functions" element={<FunctionalItemPage/>}/>
+                        <Route path="/column" element={<ColumnPage/>}/>
                         <Route path="/aboutUs" element={<AboutUsPage/>}/>
 
-                        {/*経営向け 外部背景*/}
-                        <Route path="/column/challenge" element={<ChallengeDetails/>}/>
-                        <Route path="/column/logic" element={<LogicDetails/>}/>
-                        <Route path="/column/investment" element={<InvestmentDetails/>}/>
-                        <Route path="/column/executive" element={<ExecutiveRoleDetails/>}/>
+                        {/*コラム 人事リテラシーの提供記事*/}
+                        <Route path="/column/external-factors" element={<ExternalFactorsDetail />} />
+                        <Route path="/column/motivation-theory" element={<MotivationTheoryDetail />} />
+                        <Route path="/column/belonging-theory" element={<BelongingTheoryDetail />} />
+                        <Route path="/column/internal-vision" element={<InternalVisionDetail />} />
+                        <Route path="/column/recruitment-value" element={<RecruitmentValueDetail />} />
                     </Routes>
                 </main>
                 <Footer/>
