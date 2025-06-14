@@ -1,22 +1,19 @@
 const IntroSection: React.FC = () => (
-    <section className="pt-24 pb-16 px-4 text-center bg-white shadow-inner">
-        <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl font-extrabold mb-6 text-indigo-800">
-                経営戦略と“人”の接続点を、<br/>もう一度見直す。
+    <div className="bg-gray-100 py-24 px-6 sm:px-12 text-gray-900">
+        <div className="max-w-5xl mx-auto text-center">
+            <h1 className="text-4xl sm:text-5xl font-bold text-indigo-800 mb-6 leading-tight">
+                「人が育つ構造」こそが、SESを超えるブランディング戦略。
             </h1>
-            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                現場の声、組織のひずみ、事業の未来──<br />
-                すべての起点は「人」から始まる。<br />
-                この取り組みは、人の強みを翻訳し、経営戦略に接続する一歩です。
+            <p className="text-xl sm:text-2xl mb-6 leading-relaxed text-gray-700">
+                離職率の増加、モチベーション低下、SEの評価と成果の分断——。
+                それは「育成」ではなく「消費」してきたこれまでの構造に原因があります。
             </p>
-            <p className="mt-8">
-                <button className="mt-4 px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
-                    取り組みの背景を詳しく見る
-                </button>
+            <p className="text-lg sm:text-xl mb-10 leading-relaxed text-gray-700">
+                私たちが本当に目指すのは、人が自走し、社外にも評価される「ブランド構造」の確立です。<br />
+                私たちは人財が循環し成長する仕組み「サーキュラーSES」を設計しました。
             </p>
-
         </div>
-    </section>
+    </div>
 );
 
 export default IntroSection;

@@ -13,6 +13,16 @@ module.exports = {
                 },
             },
         },
+        // fontFamily: {
+        //     sans: ['Inter', 'sans-serif'],
+        // },
+        // colors: {
+        //     brand: {
+                // DEFAULT: '#4f46e5', // Indigo-600
+                // dark: '#312e81',     // Indigo-900
+                // light: '#eef2ff',    // Indigo-50
+        //     },
+        // },
     },
     plugins: [],
 };
