@@ -41,13 +41,13 @@ export default function Nav() {
                         </Link>
                     </li>
                     <li className="border-b md:border-none">
-                        <Link to="/aboutUs" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
-                            TUNEについて
+                        <Link to="/column" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
+                            コラム
                         </Link>
                     </li>
                     <li className="border-b md:border-none">
-                        <Link to="/column" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
-                            コラム
+                        <Link to="/aboutUs" className="block  py-2 hover:underline" onClick={() => setIsOpen(false)}>
+                            TUNEについて
                         </Link>
                     </li>
                     <li>

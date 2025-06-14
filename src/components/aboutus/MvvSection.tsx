@@ -41,7 +41,8 @@ const MvvSection: React.FC = () => (
                     <h4 className="font-semibold text-gray-900 mb-1">② オセロの角をとる</h4>
                     <p className="text-gray-700 text-sm">
                         問題を要素に分解し、クリティカルな一手を見つける。<br />
-                        複雑な課題でも、思考力と調査力で突破口をつくる。
+                        複雑な課題でも、思考力と調査力で突破口をつくる。<br />
+                        クリティカルな一手は様々な複合的な問題を副次的に解決する。
                     </p>
                 </div>
 

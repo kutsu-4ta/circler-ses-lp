@@ -3,7 +3,7 @@ const ToolCardSectionSection: React.FC = () => (
         <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-indigo-800 mb-6">
                 この戦略には明確な手段がある。<br/>
-                手段には明確な目的がある。<br/>
+                この手段には明確な目的がある。<br/>
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-12">
                 戦略の根幹を支えるのは、「使える仕組み」です。<br />
