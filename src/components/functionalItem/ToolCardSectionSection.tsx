@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import Modal from "../Modal";
 import EmployeeProfileCard from "./demo/EmployeeProfileCard";
 import WillCanMustSheet from "./demo/WillCanMustSheet";
+import OneOnOnePrepSheet from "./demo/OneOnOnePrepSheet";
 
 type Tool = {
     title: string;
@@ -78,6 +79,38 @@ const tools: Tool[] = [
             </div>
     },
     {
+        title: '「言っても無駄」をなくす『1on1準備シート』',
+        desc: '話題の目的を明確にして、1on1を“話しやすく、前に進む”場にするためのツール。\n'+
+            '自分の思考を可視化することで、主任からの具体的なアドバイスやサポートを引き出す。',
+        modalContent:
+            <div>
+                <div className="px-6 py-6 bg-white border-t text-left text-sm text-gray-700 space-y-4">
+                    <div>
+                        <h3 className="text-md font-semibold text-indigo-700 mb-1">🔍 機能の目的</h3>
+                        <ul className="list-disc list-inside space-y-1">
+                            <li><strong>話すべきことを整理</strong>し、1on1を意味ある対話の時間にする。</li>
+                            <li><strong>目的と論点を明確化</strong>することで、短時間でも深い合意形成を促す。</li>
+                            <li><strong>「何を話すか迷う」</strong>を防ぎ、キャリアや評価の話もスムーズに導入。</li>
+                            <li><strong>業務連絡と内省の切り分け</strong>によって、時間配分と対話の質を最適化。</li>
+                            <li><strong>話題の偏りや継続性</strong>を見直す材料にもなり、中長期的な支援に繋がる。</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 className="text-md font-semibold text-indigo-700 mb-1">💡 UIの意図する伝え方</h3>
+                        <ul className="list-disc list-inside space-y-1">
+                            <li><strong>目的（伝える・聞き出す・合意をとる）</strong>を明記することで、対話の意図を事前に共有。</li>
+                            <li><strong>議題のタイトルと詳細</strong>を分けることで、論点の整理と背景理解がしやすくなる。</li>
+                            <li>議題は複数登録可能で、<strong>業務連絡からキャリア相談まで柔軟に扱える。</strong></li>
+                            <li><strong>雑談や自由メモ欄</strong>を設け、日常的な小さな気づきや共有にも対応。</li>
+                            <li>トグルで<strong>メンバー／主任の立場を切り替え</strong>、双方にとっての準備を可視化。</li>
+                        </ul>
+                    </div>
+                </div>
+                <OneOnOnePrepSheet/>,
+            </div>
+    },
+    {
         title: '🧠 カオナビ',
         desc: 'コンピテンシー評価やエニアグラムなどを通じて、組織横断で人材を可視化。',
         modalContent: <div/>,
@@ -92,11 +125,6 @@ const tools: Tool[] = [
         desc: '成功体験や価値観を共有し、“文化”として人材が育つ空気を形成。',
         modalContent: <div/>,
     },
-    {
-        title: '🤝 1on1準備シート',
-        desc: '対話の質と目的を高め、発信・評価・自己効力感を支援。',
-        modalContent: <div/>,
-    }
 ];
 
 const ToolCardSectionSection: React.FC = () => {

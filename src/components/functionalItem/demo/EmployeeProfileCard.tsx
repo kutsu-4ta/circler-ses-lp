@@ -9,7 +9,7 @@ const EmployeeProfileCard: React.FC = () => {
                         {/* アイコン＋名前だけ横並び */}
                         <div className="flex items-center space-x-4 mb-2">
                             <div className="w-20 h-20 rounded-full overflow-hidden bg-indigo-100 flex items-center justify-center text-indigo-500 text-2xl font-bold">
-                                YM
+                                User
                             </div>
                             <p className="text-base font-semibold text-gray-900">佐藤 拓也</p>
                         </div>
