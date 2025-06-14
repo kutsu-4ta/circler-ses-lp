@@ -4,14 +4,14 @@ const ExecutiveCTA: React.FC = () => (
     <section className="py-20 px-4 bg-white">
         <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-indigo-800 mb-6">
-                人的資本経営の第一歩は、“提案できるSE”から。
+                人的資本経営の本質は、<br />
+                「人が育つ構造」が語るブランドにある。
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-10">
-                ミッションに共鳴し、組織に貢献し、顧客に価値を届ける——。
-                <br />
-                そんな人財が、評価され、報われ、循環する仕組みがあれば、SESの常識は変えられる。
-                <br />
-                あなたの会社でも、“提案できるSE”という新しいスタンダードを育ててみませんか？
+                育成と事業が分断されたSESから、価値が循環するブランド構造へ。<br />
+                社内外に“人の成長”を伝え、評価される仕組みを整えること。<br />
+                それが、未来の採用・営業・信頼を支える企業ブランドをつくります。<br />
+                あなたの組織でも、その最初の循環を始めてみませんか？
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">
