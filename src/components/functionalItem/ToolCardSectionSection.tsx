@@ -5,6 +5,7 @@ import Modal from "../Modal";
 import EmployeeProfileCard from "./demo/EmployeeProfileCard";
 import WillCanMustSheet from "./demo/WillCanMustSheet";
 import OneOnOnePrepSheet from "./demo/OneOnOnePrepSheet";
+import InnerBlog from "./demo/InnerBlog";
 
 type Tool = {
     title: string;
@@ -18,8 +19,8 @@ const tools: Tool[] = [
         desc: '成長の押し付けではなく、本人の納得感を重視した成長設計を行う。\n' +
             '帰属意識の4指標から成長と納得感を総合的に分析する。',
         modalContent: <div>
-            {/* 機能の説明 */}
-            <div className="max-w-2xl mx-auto text-sm text-gray-700 leading-relaxed space-y-4 text-left pb-4">
+            {/* 説明パート */}
+            <div className="px-6 py-6 bg-white border-t text-left text-sm text-gray-700 space-y-4">
                 <div>
                     <h3 className="text-md font-semibold text-indigo-700 mb-1">🔍 機能の目的</h3>
                     <ul className="list-disc list-inside space-y-1">
@@ -31,59 +32,75 @@ const tools: Tool[] = [
                 <div>
                     <h3 className="text-md font-semibold text-indigo-700 mb-1">💡 UIの意図する伝え方</h3>
                     <ul className="list-disc list-inside space-y-1">
-                        <li>スキルの羅列ではなく、<strong>「今の現場で得られている楽しさ vs 理想の追求」</strong>の両立を視覚化。</li>
-                        <li>「待遇が1だけど、構成員との関係性が強い」→ 無理な配置転換よりも、今の信頼関係を活かした提案へ。</li>
-                        <li>戦略的成長とは、“ギャップを埋めること”ではなく、<strong>“構造的な納得感”</strong>を生むこと。</li>
+                        <li><strong>スキルの羅列</strong>ではなく、「今の現場で得られている楽しさ vs 理想の追求」の両立を視覚化。</li>
+                        <li><strong>待遇と関係性のバランス</strong>から、配置転換や提案の打ち手を検討。</li>
+                        <li>戦略的成長とは“ギャップを埋めること”ではなく、<strong>構造的な納得感</strong>を生むこと。</li>
                     </ul>
                 </div>
             </div>
-            <EmployeeProfileCard/>
+
+            {/* デモUI切り替えラベル */}
+            <div className="border-t mt-8 pt-6 pb-2 px-6 bg-gray-50 text-sm text-gray-600">
+                <p className="font-semibold text-indigo-700 mb-2">🧪 デモ画面（UIイメージ）</p>
+                <p>以下はデモ用のUI再現です。実際の入力や送信はできません。</p>
+            </div>
+
+            {/* デモUI */}
+            <EmployeeProfileCard />
         </div>,
     },
     {
         title: '洞察を引き出す『Will・Can・Must』',
         desc: '強み・志向・現場ニーズを言語化し、自身の成長のための分析ツール、営業の提案材料としても活用される。\n' + '言語化できない暗黙知も、直感的に伝えられるのが特長。',
-        modalContent:
-            <div>
-                <div className="px-6 py-6 bg-white border-t text-left text-sm text-gray-700 space-y-4">
-                    <div>
-                        <h3 className="text-md font-semibold text-indigo-700 mb-1">🔍 機能の目的</h3>
-                        <ul className="list-disc list-inside space-y-1">
-                            <li><strong>非言語の実感</strong>を可視化し、キャリア支援や1on1の土台にする。</li>
-                            <li><strong>本人の内的動機と、現場・組織の期待を接続</strong>する対話の起点をつくる。</li>
-                            <li><strong>Will・Can・Mustのズレ</strong>から、異動・単価交渉・成長の方向性を探る。</li>
-                            <li><strong>主観メモとフィードバック</strong>の両面から、自己認識と他者評価のギャップに気づく。</li>
-                            <li><strong>帰属意識などの定量データ</strong>とも照合し、納得感あるキャリア支援へつなげる。</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 className="text-md font-semibold text-indigo-700 mb-1">💡 UIの意図する伝え方</h3>
-                        <ul className="list-disc list-inside space-y-1">
-                            <li>円をドラッグすることで<strong>「なんとなくこの辺」</strong>という直感的な配置が可能。</li>
-                            <li>
-                                重なり具合で傾向が可視化される：
-                                <ul className="list-disc list-inside ml-5 mt-1 space-y-1 text-gray-600">
-                                    <li><strong>コツコツ型</strong>：Can × Must</li>
-                                    <li><strong>奔放型</strong>：Will × Can</li>
-                                    <li><strong>夢追い型</strong>：Will × Must</li>
-                                </ul>
-                            </li>
-                            <li>配置後に<strong>本人メモ</strong>を入力し、非言語感覚を言語化して補足。</li>
-                            <li><strong>フィードバック欄</strong>で、現場・営業・自社の視点を可視化。</li>
-                            <li><strong>自己評価と他者評価のズレ</strong>が見えることで、対話が深まる。</li>
-                        </ul>
-                    </div>
+        modalContent:<div>
+            {/* 説明パート */}
+            <div className="px-6 py-6 bg-white border-t text-left text-sm text-gray-700 space-y-4">
+                <div>
+                    <h3 className="text-md font-semibold text-indigo-700 mb-1">🔍 機能の目的</h3>
+                    <ul className="list-disc list-inside space-y-1">
+                        <li><strong>非言語の実感</strong>を可視化し、キャリア支援や1on1の土台にする。</li>
+                        <li><strong>本人の内的動機と、現場・組織の期待を接続</strong>する対話の起点をつくる。</li>
+                        <li><strong>Will・Can・Mustのズレ</strong>から、異動・単価交渉・成長の方向性を探る。</li>
+                        <li><strong>主観メモとフィードバック</strong>の両面から、自己認識と他者評価のギャップに気づく。</li>
+                        <li><strong>帰属意識などの定量データ</strong>とも照合し、納得感あるキャリア支援へつなげる。</li>
+                    </ul>
                 </div>
-                <WillCanMustSheet/>,
+
+                <div>
+                    <h3 className="text-md font-semibold text-indigo-700 mb-1">💡 UIの意図する伝え方</h3>
+                    <ul className="list-disc list-inside space-y-1">
+                        <li><strong>円をドラッグ</strong>して「なんとなくこの辺」という直感的配置が可能。</li>
+                        <li>
+                            重なり具合から傾向を可視化：
+                            <ul className="list-disc list-inside ml-5 mt-1 space-y-1 text-gray-600">
+                                <li><strong>コツコツ型</strong>：Can × Must</li>
+                                <li><strong>奔放型</strong>：Will × Can</li>
+                                <li><strong>夢追い型</strong>：Will × Must</li>
+                            </ul>
+                        </li>
+                        <li>本人メモやフィードバック欄で、<strong>非言語の感覚を言語化・補足</strong>できる。</li>
+                        <li><strong>自己評価と他者評価のズレ</strong>を見える化し、対話を促進。</li>
+                    </ul>
+                </div>
             </div>
+
+            {/* デモUI切り替えラベル */}
+            <div className="border-t mt-8 pt-6 pb-2 px-6 bg-gray-50 text-sm text-gray-600">
+                <p className="font-semibold text-indigo-700 mb-2">🧪 デモ画面（UIイメージ）</p>
+                <p>以下はプロトタイプUIです。実際の保存・操作はできません。</p>
+            </div>
+
+            {/* デモUI */}
+            <WillCanMustSheet />
+        </div>
     },
     {
         title: '「言っても無駄」をなくす『1on1準備シート』',
-        desc: '話題の目的を明確にして、1on1を“話しやすく、前に進む”場にするためのツール。\n'+
+        desc: '話題の目的を明確にして、1on1を“話しやすく、前に進む”場にするためのツール。\n' +
             '自分の思考を可視化することで、主任からの具体的なアドバイスやサポートを引き出す。',
         modalContent:
             <div>
+                {/* 説明パート */}
                 <div className="px-6 py-6 bg-white border-t text-left text-sm text-gray-700 space-y-4">
                     <div>
                         <h3 className="text-md font-semibold text-indigo-700 mb-1">🔍 機能の目的</h3>
@@ -107,7 +124,57 @@ const tools: Tool[] = [
                         </ul>
                     </div>
                 </div>
-                <OneOnOnePrepSheet/>,
+
+                {/* デモUI切り替えラベル */}
+                <div className="border-t mt-8 pt-6 pb-2 px-6 bg-gray-50 text-sm text-gray-600">
+                    <p className="font-semibold text-indigo-700 mb-2">🧪 デモ画面（UIイメージ）</p>
+                    <p>以下はUIのデモです。実際の保存・送信機能は無効となっています。</p>
+                </div>
+
+                {/* デモUI */}
+                <OneOnOnePrepSheet />
+            </div>
+    },
+    {
+        title: '社内ブログ',
+        desc: '成功体験や価値観を共有し、“文化”として人材が育つ空気を形成。',
+        modalContent:
+            <div>
+                {/* メタ的な説明 */}
+                <div className="px-6 py-6 bg-white border-t text-left text-sm text-gray-700 space-y-4">
+                    <div>
+                        <h3 className="text-md font-semibold text-indigo-700 mb-1">🔍 機能の目的</h3>
+                        <ul className="list-disc list-inside space-y-1">
+                            <li><strong>個人の思考・試行を言語化</strong>することで、学びや気づきを「文化」に昇華する。</li>
+                            <li><strong>価値観・成功体験・苦労話</strong>を共有し、部門や職種を超えた共感を育む。</li>
+                            <li><strong>趣味や雑記も発信OK</strong>にすることで、「その人らしさ」が滲み出る安心な場を提供。</li>
+                            <li><strong>組織全体の知の総量</strong>を底上げし、新たなコラボレーションや学習のきっかけを生む。</li>
+                            <li><strong>育成モデルや戦略の背景</strong>を、社員目線で「咀嚼・共有」することで、形式的な理解に留まらない腹落ちを促す。</li>
+                            <li><strong>「自己肯定感と発信」の循環</strong>を作ることで、社員の自律的な成長を支援。</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 className="text-md font-semibold text-indigo-700 mb-1">💡 UIの意図する伝え方</h3>
+                        <ul className="list-disc list-inside space-y-1">
+                            <li><strong>カテゴリ（キャリア・技術・雑記など）</strong>でセクションを分け、興味に応じた読みやすさを演出。</li>
+                            <li><strong>カード形式＋横スクロール</strong>で、note風の軽やかな閲覧体験を再現。</li>
+                            <li><strong>タグによる絞り込み</strong>で、読みたいテーマに素早くアクセス可能。</li>
+                            <li>クリックで<strong>AIによる要約モーダル</strong>が開き、記事の雰囲気や要点を事前に把握できる。</li>
+                            <li><strong>「本文を読む」ボタンはデモ用</strong>であり、実際には遷移せず「社内投稿の試し読み」を想定した構成。</li>
+                            <li>役職や所属を問わず、<strong>育成・戦略に関する自分なりの解釈や経験談</strong>を共有する文化を醸成。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* デモUI切り替えラベル */}
+                <div className="border-t mt-8 pt-6 pb-2 px-6 bg-gray-50 text-sm text-gray-600">
+                    <p className="font-semibold text-indigo-700 mb-2">🧪 デモ画面（UIイメージ）</p>
+                    <p>以下は実際の挙動を再現したデモです。投稿内容はフィクションで、リンクや遷移は無効です。</p>
+                </div>
+
+                {/* デモUI */}
+                <InnerBlog />
             </div>
     },
     {
@@ -118,11 +185,6 @@ const tools: Tool[] = [
     {
         title: '📈 Salesforce',
         desc: '社員の強みを提案文脈へ翻訳し、単価や満足度に繋げるCRM連携基盤。',
-        modalContent: <div/>,
-    },
-    {
-        title: '📝 社内ブログ',
-        desc: '成功体験や価値観を共有し、“文化”として人材が育つ空気を形成。',
         modalContent: <div/>,
     },
 ];

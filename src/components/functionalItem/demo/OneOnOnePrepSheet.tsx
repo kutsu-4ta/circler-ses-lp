@@ -55,7 +55,7 @@ const OneOnOnePrepSheet: React.FC = () => {
     const profile = role === 'member' ? memberProfile : leaderProfile;
 
     return (
-        <div className="p-6 space-y-6 bg-white shadow rounded">
+        <div className="p-6 space-y-6 bg-white">
             {/* トグル切替 */}
             <div className="flex space-x-4">
                 <button onClick={() => setRole('member')} className={role === 'member' ? 'font-bold' : ''}>メンバー用</button>
