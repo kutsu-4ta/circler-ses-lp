@@ -12,7 +12,7 @@ export default function Footer() {
                     <h3 className="text-xl font-semibold text-white mb-4">{organizeName}</h3>
                     <p className="text-sm leading-relaxed">
                         私たちは「人がよりよく幸せを目指せる社会」を<br />
-                        MVVに基づいた人財戦略で支援しています。
+                        MVVに基づいた人材育成戦略で支援しています。
                     </p>
                 </div>
 

@@ -1,9 +1,28 @@
-import BackToColumnButton from '../../../components/column/BackToColumnButton';
+import ColumnLayout from "../ColumnLayout";
+
+export const collectiveEfficacyMeta = {
+    id: "collective-efficacy",
+    title: "組織効力感という“空気”を育てるには",
+    author: "山下 将史",
+    date: "2025年6月16日",
+    category: "人事",
+    tags: [
+        "帰属意識",
+        "自己効力感",
+        "マネジメント設計",
+        "キャリア安全性",
+    ],
+};
 
 const CollectiveEfficacyDetail: React.FC = () => (
-    <section className="py-20 px-6 bg-white text-gray-800">
+    <ColumnLayout
+        title={collectiveEfficacyMeta.title}
+        author={collectiveEfficacyMeta.author}
+        date={collectiveEfficacyMeta.date}
+        category={collectiveEfficacyMeta.category}
+        tags={collectiveEfficacyMeta.tags}
+    >
         <div className="max-w-3xl mx-auto">
-            <h1 className="text-3xl font-bold text-indigo-800 mb-6">組織効力感という“空気”を育てるには</h1>
             <p className="text-lg leading-relaxed mb-6">
                 組織効力感とは、「このチームならできるかもしれない」という集団的な信念。<br />
                 個人のやる気ではなく、チームの“空気”として醸成される感覚です。
@@ -23,9 +42,8 @@ const CollectiveEfficacyDetail: React.FC = () => (
                 この視点に立った時、マネジメントや制度設計においても、
                 エンゲージメントは感情論ではなく、戦略として扱うことが可能になります。
             </p>
-            <BackToColumnButton />
         </div>
-    </section>
+    </ColumnLayout>
 );
 
 export default CollectiveEfficacyDetail;

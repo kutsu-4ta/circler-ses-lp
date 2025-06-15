@@ -19,6 +19,7 @@ import SelfMutualPublicAidDetail from "./components/column/details/SelfMutualPub
 import InternalBrandingDetail from "./components/column/details/InternalBrandingDetail";
 import WillCanMustDetail from "./components/column/details/WillCanMustDetail";
 import SelfEfficacyDetail from "./components/column/details/SelfEfficacyDetail";
+import CollectiveEfficacyDetail from "./components/column/details/CollectiveEfficacyDetail";
 
 function Container({children}: { children: React.ReactNode }) {
     return (
@@ -63,6 +64,7 @@ export default function App() {
                         <Route path="/column/recruitment-value" element={<RecruitmentValueDetail />} />
                         <Route path="/column/self-efficacy" element={<SelfEfficacyDetail />} />
                         <Route path="/column/self-mutual-public-aid" element={<SelfMutualPublicAidDetail />} />
+                        <Route path="/column/collective-efficacy" element={<CollectiveEfficacyDetail />} />
                         <Route path="/column/internal-branding" element={<InternalBrandingDetail />} />
                         <Route path="/column/will-can-must" element={<WillCanMustDetail />} />
                     </Routes>

@@ -1,31 +1,74 @@
-import BackToColumnButton from '../../../components/column/BackToColumnButton';
+import ColumnLayout from "../../../components/column/ColumnLayout";
+
+export const selfEfficacyMeta = {
+    id: "self-efficacy",
+    title: "自己効力感が人を育てる組織のエンジン",
+    author: "山下 将史",
+    date: "2025年6月16日",
+    category: "育成",
+    tags: [
+        "自己効力感",
+        "組織効力感",
+        "ナレッジ共有",
+        "心理的資本",
+        "ロールモデル",
+    ],
+};
 
 const SelfEfficacyDetail: React.FC = () => (
-    <section className="py-20 px-6 bg-white text-gray-800">
-        <div className="max-w-3xl mx-auto">
-            <h1 className="text-3xl font-bold text-indigo-800 mb-6">自己効力感が人を育てる組織のエンジン</h1>
-            <p className="text-lg leading-relaxed mb-6">
-                「自分にもできるかもしれない」という信念は、社員の行動の出発点です。<br />
-                組織においてこの“自己効力感”が醸成されると、挑戦や自律的な行動が生まれ、
-                成長スピードが加速します。
-            </p>
-            <p className="text-base leading-relaxed mb-6">
-                自己効力感は、以下のような要素から育てることができます：
-            </p>
-            <ul className="list-disc pl-6 mb-6 space-y-2 text-base">
-                <li>過去の成功体験（小さな達成でも可視化する）</li>
-                <li>他者からの期待やフィードバック</li>
-                <li>1on1や社員カルテを通じた内省機会</li>
-                <li>ロールモデルの提示や、他者の成功との接点</li>
-            </ul>
-            <p className="text-base leading-relaxed mb-6">
-                特に、“提案できるSE”を育成するには、業務の中で「成功の定義」を共有し、
-                それが本人にとっても価値あるものであると認識されることが重要です。<br />
-                自信は偶然ではなく、構造的に設計できるものです。
-            </p>
-            <BackToColumnButton />
+    <ColumnLayout
+        title={selfEfficacyMeta.title}
+        author={selfEfficacyMeta.author}
+        date={selfEfficacyMeta.date}
+        category={selfEfficacyMeta.category}
+        tags={selfEfficacyMeta.tags}
+    >
+        <p className="text-lg leading-relaxed mb-6">
+            優秀な人や尊敬する先輩を見て、「自分にはできない」と感じたことはありませんか？<br />
+            でも、その人がかつて<b>同じことで悩み、詰まっていた</b>と知った瞬間、少しだけ<b>自分にもできるかも</b>という気持ちが芽生えます。
+        </p>
+
+        <p className="text-lg leading-relaxed mb-6">
+            この「これなら自分でもできそう」という感覚が、<b>自己効力感</b>です。<br />
+            自己効力感は人の行動を促し、成長意欲の“着火点”になります。
+        </p>
+
+        <p className="text-lg leading-relaxed mb-6">
+            たとえば、新人の頃に誰もがぶつかるエラーや設計の壁に対して、<br />
+            「先輩もここで詰まっていたが、こうやって突破していた」<br />
+            という<b>成長ログ</b>が残っていれば、それは次の世代の<b>心理的資産</b>になります。
+        </p>
+
+        <p className="text-lg leading-relaxed mb-6">
+            成長ログの中には、意外にも<b>簡単な工夫</b>や<b>ちょっとした視点の転換</b>が含まれていることが多く、<br />
+            それを知った後輩は、「その程度でいいのか！」と肩の力が抜けることもあります。
+        </p>
+
+        <div className="flex justify-center my-8">
+            <img
+                src="/column/self-efficacy.png"
+                alt="自己効力感"
+                className="max-w-full h-auto rounded shadow-md"
+            />
         </div>
-    </section>
+
+        <p className="text-lg leading-relaxed mb-6">
+            こうして育まれた自己効力感は、やがて<b>組織効力感</b>へとつながります。<br />
+            「自分一人では難しいけれど、このチームならできそう」という感覚。<br />
+            これは個人の能力よりも<b>つながり</b>や<b>信頼</b>によって生まれます。
+        </p>
+
+        <p className="text-lg leading-relaxed mb-6">
+            たとえば、プログラミングしかできない人と、デザインしかできない人がペアになるだけで、<br />
+            二人ではできることが一気に広がります。これは<b>能力の和</b>ではなく、<b>関係の可視化</b>の結果です。
+        </p>
+
+        <p className="text-lg leading-relaxed mb-6">
+            知識や経験を言語化し、共有する文化。<br />
+            成功や失敗をログとして残す仕組み。<br />
+            そうした取り組みが、<b>自己効力感の連鎖</b>を生み、組織全体の<b>心理的な底力</b>を育てていきます。
+        </p>
+    </ColumnLayout>
 );
 
 export default SelfEfficacyDetail;
