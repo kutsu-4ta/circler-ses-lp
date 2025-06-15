@@ -74,6 +74,10 @@ const InternalCycleSection: React.FC = () => (
                 ))}
             </div>
 
+            <div>
+                <p>TDO: 成長スタイルPPM</p>
+            </div>
+
             {/* 全体CTA */}
             <div className="mt-16">
                 <Link
