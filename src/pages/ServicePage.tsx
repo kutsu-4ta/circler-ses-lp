@@ -20,8 +20,8 @@ const ServicePage: React.FC = () => {
             {/* 4. 投資と再現性の論理 */}
             <StrategicInvestmentSection/>
 
-            {/* 5. 指標：KGIとKPIによる成果測定 */}
-            <MeasurementSection/>
+            {/*/!* 5. 指標：KGIとKPIによる成果測定 *!/*/}
+            {/*<MeasurementSection/>*/}
 
             {/* 6. CTA：導入のご相談 */}
             <ServiceCTA/>

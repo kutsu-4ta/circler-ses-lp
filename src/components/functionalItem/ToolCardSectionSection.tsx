@@ -468,6 +468,7 @@ const ToolCardSectionSection: React.FC = () => {
                             </div>
                         </div>
                     ))}
+                    <p>and more...</p>
                 </div>
 
                 {/* モーダル表示 */}
