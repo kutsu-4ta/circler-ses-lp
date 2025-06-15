@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
         "./index.html",
@@ -6,23 +5,24 @@ module.exports = {
     ],
     theme: {
         extend: {
+            colors: {
+                strategy: {
+                    internal: '#059669', // green
+                    external: '#2563eb', // blue
+                    overlay: 'rgba(0,0,0,0.6)',
+                    surface: '#1e293b'    // slate-800
+                },
+            },
             container: {
                 center: true,
                 screens: {
                     xl: '1480px', // macBookAir13インチでは綺麗
                 },
             },
+            fontFamily: {
+                strategy: ['"Roboto Condensed"', 'sans-serif'],
+            },
         },
-        // fontFamily: {
-        //     sans: ['Inter', 'sans-serif'],
-        // },
-        // colors: {
-        //     brand: {
-                // DEFAULT: '#4f46e5', // Indigo-600
-                // dark: '#312e81',     // Indigo-900
-                // light: '#eef2ff',    // Indigo-50
-        //     },
-        // },
     },
     plugins: [],
 };
