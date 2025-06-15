@@ -1,42 +1,87 @@
+import { Link } from 'react-router-dom';
+
 const InternalCycleSection: React.FC = () => (
-    <section className="py-24 px-4 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-indigo-800 mb-6">
-                自己理解と発信から始まる、評価と報酬の“社内循環”
+    <section className="py-24 px-4 bg-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto text-center">
+            {/* セクションタイトル */}
+            <h2 className="text-3xl sm:text-4xl font-bold text-emerald-700 mb-6">
+                ほんとに回るの？<br className="sm:hidden" />評価と報酬の“社内循環”
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-12">
-                強みを言語化し、社内に伝える。<br />
-                社員一人ひとりの“らしさ”が、提案や評価に繋がり、報酬として還元される構造を整えることで、<br />
-                内発的動機づけに基づく自律的な成長が始まります。
+
+            {/* 導入文 */}
+            <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-3xl mx-auto">
+                綺麗事じゃない、本当に「仕組み」として成り立つのか？<br />
+                その疑問に答える4つのステップをご紹介します。
             </p>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+            {/* ステップカード */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 text-left relative">
                 {[
                     {
+                        step: 'STEP 1',
                         title: '🧠 自己棚卸し',
-                        desc: '自分のwill・can・mustを整理し、強みや価値観を可視化。',
+                        quote: 'Will・Can・Mustなんて抽象的すぎる。どうすれば整理できるの？',
+                        desc: '自己理解支援シートや1on1支援ツールで、「自分らしさ」を言語化できます。',
+                        to: '/functions#self-analysis',
                     },
                     {
-                        title: '🗣 社内発信（ブログ・1on1）',
-                        desc: '強みや成功体験を、社内で共有する文化的インフラへ。',
+                        step: 'STEP 2',
+                        title: '🗣 社内発信',
+                        quote: '発信なんて恥ずかしいし浮きそう…',
+                        desc: '1on1や社内ブログ、プレゼン支援のフォーマットで「浮かない発信」を文化にします。',
+                        to: '/functions#internal-voice',
                     },
                     {
+                        step: 'STEP 3',
                         title: '📈 社内評価と認知',
-                        desc: '提案力や自律性が構造的に整理された評価軸で可視化される。',
+                        quote: '結局“空気を読む人”が得をするんじゃないの？',
+                        desc: '構造化された提案評価フローで、「自律性」や「提案力」がちゃんと見える。',
+                        to: '/functions#evaluation',
                     },
                     {
-                        title: '🎉 給与・登用・特権への還元',
-                        desc: 'モデルSEとして認定され、報酬・任用・影響力の循環が生まれる。',
+                        step: 'STEP 4',
+                        title: '🎉 報酬と登用',
+                        quote: 'ほんとに還元されるの？理想論じゃないの？',
+                        desc: '表彰制度や評価連動の報酬設計で、身近な人からの感謝が仕組みとして還元されます。',
+                        to: '/functions#rewards',
                     },
                 ].map((item, i) => (
-                    <div
-                        key={i}
-                        className="bg-indigo-50 rounded-xl shadow-sm p-6 border border-indigo-100"
-                    >
-                        <h3 className="text-xl font-semibold text-indigo-700 mb-2">{item.title}</h3>
-                        <p className="text-gray-700">{item.desc}</p>
+                    <div key={i} className="relative">
+                        {/* セリフパート（上に浮かせる） */}
+                        <div className="mb-4 px-4 py-3 rounded-lg bg-emerald-100 text-emerald-800 text-sm font-medium shadow border border-emerald-200">
+                            {item.quote}
+                        </div>
+
+                        {/* 本体カード */}
+                        <div className="bg-emerald-50 rounded-xl shadow-sm p-6 border border-emerald-100 flex flex-col justify-between">
+                            <div>
+                                <span className="text-sm text-emerald-400 font-bold">{item.step}</span>
+                                <h3 className="text-xl font-semibold text-emerald-700 mt-1 mb-3">{item.title}</h3>
+                                <p className="text-gray-700">{item.desc}</p>
+                            </div>
+
+                            {/* CTA */}
+                            <div className="mt-6">
+                                <Link
+                                    to={item.to}
+                                    className="inline-block text-sm font-semibold text-emerald-600 hover:text-emerald-800 underline"
+                                >
+                                    機能を見てみる →
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 ))}
+            </div>
+
+            {/* 全体CTA */}
+            <div className="mt-16">
+                <Link
+                    to="/functions"
+                    className="inline-block px-8 py-4 bg-emerald-600 text-white text-lg font-semibold rounded-full shadow hover:bg-emerald-700 transition"
+                >
+                    社内循環を支える機能一覧を見る
+                </Link>
             </div>
         </div>
     </section>
