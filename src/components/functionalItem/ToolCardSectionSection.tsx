@@ -1,6 +1,7 @@
 import {JSX, useEffect, useState} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 import Modal from "../Modal";
 import EmployeeProfileCard from "./demo/EmployeeProfileCard";
 import WillCanMustSheet from "./demo/WillCanMustSheet";
@@ -178,15 +179,244 @@ const tools: Tool[] = [
             </div>
     },
     {
-        title: '🧠 カオナビ',
-        desc: 'コンピテンシー評価やエニアグラムなどを通じて、組織横断で人材を可視化。',
-        modalContent: <div/>,
+        title: 'カオナビ',
+        desc: 'コンピテンシー評価やエニアグラムなどを通じて、組織横断で人材を可視化。\nカルテやキャリア支援の“精度”を高める情報基盤となる。',
+        modalContent:
+            <div>
+                {/* メタ的な説明 */}
+                <div className="px-6 py-6 bg-white border-t text-left text-sm text-gray-700 space-y-4">
+                    <p className="text-xl font-bold text-gray-900">カオナビの役割と戦略的位置づけ</p>
+
+                    <p>
+                        この戦略における <span className="font-semibold text-indigo-700">カオナビの目的</span> は、主に以下の2点に集約されます。
+                    </p>
+
+                    <ul className="list-disc list-inside pl-4 space-y-1">
+                        <li><span className="font-semibold">社員情報の収集（志向・スキル・価値観）</span></li>
+                        <li><span className="font-semibold">社員情報の管理（可視化・構造化）</span></li>
+                    </ul>
+
+                    <p>
+                        カオナビは「社員情報の見える化」に特化したツールですが、
+                        その運用はあくまで <span className="font-semibold text-indigo-700">人材戦略・アサイン戦略</span> 全体の一部です。
+                    </p>
+
+                    <p>
+                        人材戦略において特に重要なのが、
+                        <span className="font-semibold">「個の理解（社員を知る）」</span>と
+                        <span className="font-semibold">「適材適所（最適に活かす）」</span>です。
+                    </p>
+
+                    <p>
+                        カオナビは、これらの実現に向けて必要な情報を支えるデータ基盤として機能します。<br/>
+                        つまり、<span className="font-semibold">個の理解のための「収集」</span>と、
+                        <span className="font-semibold">適材適所のための「管理」</span>という観点で、
+                        カオナビを運用する意義が明確になります。
+                    </p>
+
+                    <p className="text-xl font-bold text-gray-900 pt-10">「who」と「what」の社内可視化</p>
+
+                    <p>
+                        この構造が正しく機能することで、次の2軸が戦略的に明確になります。
+                    </p>
+
+                    <ul className="list-disc list-inside pl-4 space-y-1">
+                        <li><span className="font-semibold text-indigo-700">who：</span>その社員がどんな志向やWillを持っているか</li>
+                        <li><span className="font-semibold text-indigo-700">what：</span>どんな場面で最大のパフォーマンスを発揮するか</li>
+                    </ul>
+
+                    <p>
+                        この2軸が定義されることで、<span className="font-semibold">「誰を」「どこで活かすか」</span>を見極め、
+                        より適切なアサインが可能になります。
+                    </p>
+
+                    <p className="text-xl font-bold text-gray-900 pt-10">「適切なアサイン」の定義と構築</p>
+
+                    <p>
+                        最適なアサインを実現するには、
+                        <span className="font-semibold text-indigo-700">社内外の情報サイクルを両輪で回す</span>ことが不可欠です。
+                    </p>
+
+                    <ul className="list-disc list-inside pl-4 space-y-1">
+                        <li>
+                            <span className="font-semibold">社内：</span>
+                            カオナビを活用し、社員一人ひとりの志向・経験・得意領域などをポートフォリオ化。
+                            Will・Can・Mustや社員カルテ、パルスサーベイ、1on1記録といった文化資本を可視化・蓄積。
+                        </li>
+                        <li>
+                            <span className="font-semibold">社外：</span>
+                            Salesforceによって顧客側のプロジェクト要件・期待値を構造化し、必要なスキルやマインドを明確化。
+                        </li>
+                    </ul>
+
+                    <p className="text-xl font-bold text-gray-900 pt-10">カオナビは“内製化装置”である</p>
+
+                    <p>
+                        社内外の情報が接続されることで、
+                        <span className="font-semibold text-indigo-700">人的資本とプロジェクトニーズの最適配置</span>が実現されます。
+                    </p>
+
+                    <p>
+                        この精度を高めるためには、
+                        <span className="font-semibold">カオナビを軸にしたPDCAサイクル</span>を継続的に回すことが求められます。<br/>
+                        カオナビは単なる人材管理ツールではなく、
+                        <span className="font-semibold text-indigo-700">文化資本をアサイン戦略へ翻訳する「内製化装置」</span>として位置づけられます。
+                    </p>
+
+                    <p className="text-xl font-bold text-gray-900 pt-10">まとめ</p>
+
+                    <ul className="list-disc list-inside pl-4 space-y-1">
+                        <li>
+                            カオナビは「社員名簿」ではなく、<span className="font-semibold">文化資本を構造化する装置</span>である
+                        </li>
+                        <li>
+                            社員のWill・成長ログ・適性を、アサインや育成戦略に活用するための<span className="font-semibold">翻訳基盤</span>である
+                        </li>
+                        <li>
+                            <span className="font-semibold">「誰を、どこに、なぜ活かすか」</span>を再現可能にする仕組みである
+                        </li>
+                    </ul>
+                </div>
+
+                {/* カオナビ活用事例へのリンク案内 */}
+                <div className="border-t mt-8 pt-6 pb-4 px-6 bg-gray-50 text-sm text-gray-600 space-y-2">
+                    <p className="font-semibold text-indigo-700 mb-1">カオナビの活用事例へ</p>
+                    <p>
+                        帰属意識の変化を可視化するパルスサーベイや、戦略的なアンケート設計のノウハウなど、
+                        実際の活用方法を紹介しています。
+                    </p>
+                    <a
+                        href="https://www.kaonavi.jp/dictionary/jugyoinmanzokudo_torikumi/" // ← ここに実際のリンクを設定
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-1 text-indigo-600 hover:underline"
+                    >
+                        ▶ 活用事例を読む
+                    </a>
+                </div>
+            </div>
     },
     {
-        title: '📈 Salesforce',
+        title: 'Salesforce',
         desc: '社員の強みを提案文脈へ翻訳し、単価や満足度に繋げるCRM連携基盤。',
-        modalContent: <div/>,
-    },
+        modalContent: (
+            <div>
+                {/* メタ的な説明 */}
+                <div className="px-6 py-6 bg-white border-t text-left text-sm text-gray-700 space-y-4">
+                    <p className="text-xl font-bold text-gray-900">Salesforceの役割と戦略的位置づけ</p>
+                    <p>
+                        この戦略における <span className="font-semibold text-indigo-700">Salesforceの目的</span> は、
+                        主に以下の2点に集約されます。
+                    </p>
+
+                    <ul className="list-disc list-inside pl-4 space-y-1">
+                        <li><span className="font-semibold">顧客情報の収集</span></li>
+                        <li><span className="font-semibold">顧客情報の管理</span></li>
+                    </ul>
+
+                    <p>
+                        Salesforceは「顧客情報の収集・管理」に特化したツールですが、
+                        その運用はあくまで <span className="font-semibold text-indigo-700">マーケティング戦略</span> 全体の一部です。
+                    </p>
+
+                    <p>
+                        マーケティング戦略には、さまざまな分析や施策がありますが、<br/>
+                        なかでも特に重要なのが、
+                        <span className="font-semibold">「ターゲティング（誰を狙うか）」</span>と
+                        <span className="font-semibold">「顧客理解（どんな価値を求めているか）」</span>です。
+                    </p>
+
+                    <p>
+                        Salesforceは、これらの判断材料となる情報を支えるデータ基盤として活用されます。<br/>
+                        つまり、<span className="font-semibold">ターゲティングのための「収集」</span>と、
+                        <span className="font-semibold">顧客理解のための「管理」</span>という観点で、
+                        Salesforceを運用することが意義になります。
+                    </p>
+
+                    <p className="text-xl font-bold text-gray-900 pt-10">「who」と「what」の明確化</p>
+
+                    <p>
+                        この構造が正しく機能することで、次の2軸が戦略的に明確になります。
+                    </p>
+
+                    <ul className="list-disc list-inside pl-4 space-y-1">
+                        <li><span className="font-semibold text-indigo-700">who：</span>その顧客の属性</li>
+                        <li><span className="font-semibold text-indigo-700">what：</span>その顧客が自社に求めている期待値</li>
+                    </ul>
+
+                    <p>
+                        この2軸が定義されることで、<span className="font-semibold">「誰に」「どんな価値を」</span>を見極め、
+                        より最適なSEの提案が可能になります。
+                    </p>
+
+                    <p className="text-xl font-bold text-gray-900 pt-10">「最適なSE」の定義と構築</p>
+
+                    <p>
+                        適切な提案には、<span className="font-semibold text-indigo-700">社内外の情報サイクルを両輪で回す</span>ことが重要です。
+                    </p>
+
+                    <ul className="list-disc list-inside pl-4 space-y-1">
+                        <li>
+                            <span className="font-semibold">社内：</span>
+                            社員のWillを軸にしたポートフォリオ管理。Will・Can・Mustや社員カルテなどの文化資本が活用されます。
+                        </li>
+                        <li>
+                            <span className="font-semibold">社外：</span>
+                            Salesforceを通じて顧客データを定量化し、セグメントごとのニーズを明確化します。
+                        </li>
+                    </ul>
+
+                    <p className="text-xl font-bold text-gray-900 pt-10">Salesforceは“学習装置”である</p>
+
+                    <p>
+                        社内外の情報が接続されることで、
+                        <span className="font-semibold text-indigo-700">統計的な傾向から自社の最適解</span>が導き出されます。
+                    </p>
+
+                    <p>
+                        この精度を高めるためには、
+                        <span className="font-semibold">Salesforceを軸にしたPDCAサイクル</span>を継続的に回す必要があります。<br/>
+                        サーキュラーSESにおけるSalesforceはもはや単なるCRMではなく、
+                        <span className="font-semibold text-indigo-700">文化資本を顧客価値へ変換する「価値翻訳装置」</span>に位置します。
+                    </p>
+
+                    <p className="text-xl font-bold text-gray-900 pt-10">まとめ</p>
+
+                    <ul className="list-disc list-inside pl-4 space-y-1">
+                        <li>
+                            Salesforceは「営業支援ツール」ではなく、<span className="font-semibold">社内文化を翻訳する装置</span>である
+                        </li>
+                        <li>
+                            社員のWillや経験などの文化資本と、顧客データを結びつける <span className="font-semibold">接続基盤</span> である
+                        </li>
+                        <li>
+                            <span className="font-semibold">「誰に、どんな価値を、誰が届けるか」</span>を明文化・再現可能にする仕組みである
+                        </li>
+                    </ul>
+                </div>
+
+                {/* デモUI切り替えラベル（今回は未実装のため記載のみ） */}
+                <div className="border-t mt-8 pt-6 pb-2 px-6 bg-gray-50 text-sm text-gray-600 leading-relaxed">
+                    <p className="font-semibold text-indigo-700 mb-2">
+                        Salesforce運用の工夫は活用ガイドに記載しております
+                    </p>
+                    <p>
+                        個別顧客への提案戦略と社員プロファイルの接続方法、営業活用のTIPSなどは
+                        活用ガイドをご参照ください。
+                    </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row justify-center gap-4 mt-4">
+                    <Link
+                        to="/toolkits"
+                        className="border-2 border-indigo-600 text-indigo-700 text-lg font-semibold px-6 py-3 rounded-full hover:bg-white transition"
+                    >
+                        活用ガイドを読む
+                    </Link>
+                </div>
+            </div>
+        ),
+    }
 ];
 
 const ToolCardSectionSection: React.FC = () => {

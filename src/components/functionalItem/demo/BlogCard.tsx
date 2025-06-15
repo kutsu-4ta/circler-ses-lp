@@ -1,7 +1,3 @@
-// components/BlogCard.tsx
-
-import React from 'react';
-
 type BlogCardProps = {
     title: string;
     excerpt: string;
