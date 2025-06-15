@@ -1,11 +1,12 @@
 import {useEffect, useRef, useState} from 'react';
+import {html} from "framer-motion/m";
 
 type NodeData = {
     id: number;
     label: string;
     top: number;
     left: number;
-    description: string;
+    description: html;
 };
 
 const nodes: NodeData[] = [
@@ -14,70 +15,131 @@ const nodes: NodeData[] = [
         label: '顧客へのサービス品質',
         top: 10,
         left: 80,
-        description: '顧客接点での品質管理と<br/>フィードバックループの整備'
+        description: `顧客接点における対応品質の一貫性と、フィードバックループの整備が鍵。<br/><br/>
+<b>KGI:</b> 顧客クレーム率の低下、CSATスコアの改善<br/>
+<b>KPI:</b> 品質チェック率、フィードバック反映数<br/>
+<b>施策:</b> Salesforceによる情報連携、業務プロセスの標準化、顧客対応フローの明文化<br/>
+<b>注意点:</b> 顧客の声を「収集」するだけで終わらせない。仕組みによる即時反映が肝。
+`
     },
     {
         id: 2,
         label: '顧客満足度向上',
         top: 10,
         left: 60,
-        description: 'NPSやCSATの<br/>測定・改善施策の実行'
+        description: `
+NPS・CSATを指標とした体験設計。<br/><br/>
+<b>KGI:</b> NPSの年次改善、契約継続率<br/>
+<b>KPI:</b> 満足度調査の回答率、改善施策の実行数<br/>
+<b>施策:</b> 顧客ジャーニーの可視化、ペルソナ設計、FAQ整備など<br/>
+<b>注意点:</b> スコア至上主義にならず「感情」と「体験」の定性要素も重視すること。
+`
     },
     {
         id: 3,
         label: '顧客ロイヤルティ',
         top: 10,
         left: 40,
-        description: '再購入率や紹介率向上に向けた<br/>施策設計'
+        description: `
+「再購入」や「紹介」に繋がるファンづくり。<br/><br/>
+<b>KGI:</b> リピート率、紹介数、ロイヤル顧客数<br/>
+<b>KPI:</b> 顧客交流イベント数、アンバサダー化施策数<br/>
+<b>施策:</b> 成功事例の共有、顧客登壇の支援、コミュニティ構築<br/>
+<b>注意点:</b> ロイヤルティは短期成果で測れない。定期的な関係性構築を優先。
+`
     },
     {
         id: 4,
         label: '企業の成長',
         top: 5,
         left: 20,
-        description: 'KPI・OKRベースの<br/>成長指標の明確化'
+        description: `
+組織としての成長を、個人と仕組みの成長に接続。<br/><br/>
+<b>KGI:</b> 売上成長率、顧客単価、拠点・事業の拡大数<br/>
+<b>KPI:</b> 成長指標ダッシュボードの運用率、社内提案数<br/>
+<b>施策:</b> OKR設計、SEによる提案制度、<a href="#glossary-自己効力感">自己効力感</a>の文化定着<br/>
+<b>注意点:</b> 数字で評価する文化が、人を潰さないように<a href="#glossary-自己効力感">“自己効力感”</a>を軸にする。
+`
     },
     {
         id: 5,
         label: '収益の向上',
         top: 15,
         left: 20,
-        description: 'LTV向上と<br/>CAC削減のバランス最適化'
+        description: `
+LTV向上とCAC削減のバランス最適化が収益性の鍵。<br/><br/>
+<b>KGI:</b> 顧客LTV、粗利率、CACの改善<br/>
+<b>KPI:</b> 提案単価の推移、失注率の低下<br/>
+<b>施策:</b> 社内発信によるSEの価値可視化、営業との連携強化（Salesforce）<br/>
+<b>注意点:</b> 一時的な単価アップにとらわれず、文化として“継続可能な利益構造”を育てる。
+`
     },
     {
         id: 6,
         label: '自社内のサービス品質',
         top: 65,
         left: 20,
-        description: 'プロセス標準化と<br/>ナレッジ共有による品質底上げ'
+        description: `
+社内業務の品質を安定させる仕組み化と知見共有。<br/><br/>
+<b>KGI:</b> 内部品質評価スコア、社内トラブル件数の減少<br/>
+<b>KPI:</b> ナレッジ共有件数、テンプレート利用率<br/>
+<b>施策:</b> ブログ・社内プレゼン・標準化ドキュメントの蓄積<br/>
+<b>注意点:</b> 属人化を避け、仕組みで誰でも一定品質を担保できるようにする。
+`
     },
     {
         id: 7,
         label: '社員満足度向上',
         top: 65,
         left: 40,
-        description: '1on1の仕組みや<br/>キャリア支援制度の整備'
+        description: `
+社員のやりがいと報酬の接続。<a href="#glossary-内発的動機づけ">内発的動機</a>の設計がカギ。<br/><br/>
+<b>KGI:</b> エンゲージメントスコア、離職率の改善<br/>
+<b>KPI:</b> 1on1実施率、自己評価満足度、キャリア面談数<br/>
+<b>施策:</b> キャリア支援制度、定期1on1、社内発信文化の育成<br/>
+<b>注意点:</b> 表面的な制度より“意味のある対話”が幸福度を上げる。<br/>
+（例：<a href="#glossary-キャリア安全性">キャリア安全性</a> の保障など）
+`
     },
     {
         id: 8,
         label: '社員の定着率',
         top: 60,
         left: 60,
-        description: 'オンボーディングと<br/>心理的安全性の向上'
+        description: `
+安心して挑戦できる“居場所感”の設計。<br/><br/>
+<b>KGI:</b> 離職率の改善、定着年数の中央値向上<br/>
+<b>KPI:</b> オンボーディング満足度、サーベイ実施率<br/>
+<b>施策:</b> オンボーディングキット、<a href="#glossary-心理的安全性">心理的安全性</a>を高めるチーム運営<br/>
+<b>注意点:</b> 早期離職の防止は、最初の3ヶ月の“ケアと期待値”で決まる。<br/>
+→ <a href="#glossary-帰属意識">帰属意識</a>の醸成が鍵。
+`
     },
     {
         id: 9,
         label: '社員のスキル',
         top: 70,
         left: 60,
-        description: 'スキルマップと<br/>育成ロードマップの導入'
+        description: `
+        “成長実感”があるスキル獲得支援と評価設計。<br/><br/>
+        <b>KGI:</b> スキルランク分布の上昇、プロジェクトマッチ率<br/>
+        <b>KPI:</b> スキルマップの記入率、育成計画の完遂率<br/>
+        <b>施策:</b> スキルマップ、育成ロードマップ、OJT、1on1 + OKR連動<br/>
+        <b>注意点:</b> 評価や報酬と連動させ、努力が報われる実感を作ることで、<a href="#glossary-内的動機づけ">内的動機づけ</a>へとシフトさせることが大事。
+        `
     },
     {
         id: 10,
         label: '社内資産',
         top: 65,
         left: 80,
-        description: '技術・文化・ドキュメントの<br/>資産化と活用'
+        description: `
+技術・文化・言語化された知恵を“社内資産”として蓄積。<br/><br/>
+<b>KGI:</b> 社内資産の活用件数、他部署展開率<br/>
+<b>KPI:</b> ブログ投稿数、再利用テンプレ数<br/>
+<b>施策:</b> 社内ドキュメントの標準化、ナレッジシェア会、表彰制度による文化醸成<br/>
+<b>注意点:</b> “投稿者だけが得をする”ではなく、他の社員が<a href="#glossary-内的動機づけ">自分でもやれそう感</a>を感じる雰囲気を醸成する設計が重要。
+`
     }
 ];
 
@@ -260,34 +322,31 @@ export default function ProcessFlowChart() {
                 onMouseLeave={handleMouseLeave}
             />
 
-            {/* 全面オーバーレイ */}
+            {/* 全面オーバーレイ（背景だけクリック不可） */}
             {hoverZone && (
                 <div className="absolute inset-0 bg-black bg-opacity-60 z-40 pointer-events-none" />
             )}
 
+            {/* 説明ボックス本体（クリック可能にする） */}
             {hoverZone && (
                 <>
-                    {/* ゾーン名ラベル（左上／色分け） */}
-                    <div className={`
-            absolute
-            ${hoverZone === "external" ? "top-[22%] text-blue-400" : ""}
-            ${hoverZone === "internal" ? "top-[13%] text-emerald-400" : ""}
-            left-1/3 transform -translate-x-1/2
-            z-50 pointer-events-none
-            text-xl font-semibold tracking-tight
-        `}>
-                        {hoverZone === "external" && "顧客体験に直結する社外循環"}
-                        {hoverZone === "internal" && "社員の満足・定着・成長による人的資本循環"}
-                    </div>
-
-                    {/* 説明ボックス内部 */}
-                    <div className={`absolute top-[${hoverZone === 'external' ? '45' : '35'}%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none`}>
+                    <div
+                        className={`
+        absolute
+        ${hoverZone === "external" ? "top-[45%]" : "top-[35%]"}
+        left-1/2 transform -translate-x-1/2 -translate-y-1/2
+        z-50
+        // pointer-events-none は削除
+      `}
+                    >
                         <div className={`
         bg-slate-800/90 border
         ${hoverZone === "external" ? "border-blue-500" : "border-emerald-500"}
         rounded-lg shadow-md
-        px-6 py-4 max-w-3xl w-[700px] h-[180px] relative
-    `}>
+        px-6 py-4 w-[900px] h-[220px]
+        relative
+        pointer-events-auto // 必要に応じて追加
+      `}>
                             {/* タイトル */}
                             <div className="absolute top-4 left-4 text-white text-lg font-semibold">
                                 {hoveredNodeId
@@ -295,15 +354,18 @@ export default function ProcessFlowChart() {
                                     : "項目を選択してください"}
                             </div>
 
-                            {/* 本文 */}
-                            <div className="mt-12 text-white text-left text-sm sm:text-base font-normal leading-relaxed overflow-auto">
-                                <div
-                                    dangerouslySetInnerHTML={{
-                                        __html: hoveredNodeId
-                                            ? nodes.find(n => n.id === hoveredNodeId)?.description || ""
-                                            : "<p class='opacity-50'>ホバーして詳細を表示</p>"
-                                    }}
-                                />
+                            {/* 本文（最大幅制限を外す） */}
+                            <div className="mt-8 text-white text-left text-sm sm:text-base font-normal leading-relaxed overflow-auto">
+                                {hoveredNodeId ? (
+                                    <div
+                                        className="text-left leading-relaxed text-white text-sm sm:text-base font-normal description-box"
+                                        dangerouslySetInnerHTML={{
+                                            __html: nodes.find(n => n.id === hoveredNodeId)?.description || ""
+                                        }}
+                                    />
+                                ) : (
+                                    <p className="opacity-50">ホバーして詳細を表示</p>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -329,7 +391,8 @@ export default function ProcessFlowChart() {
                         onMouseEnter={() => handleNodeEnter(node.id)}
                         onMouseLeave={handleNodeLeave}
                     >
-                        <div className="text-sm mt-1 text-center text-gray-700 whitespace-nowrap z-10 font-semibold bg-white px-2 py-1 rounded">
+                        <div
+                            className="text-sm mt-1 text-center text-gray-700 whitespace-nowrap z-10 font-semibold bg-white px-2 py-1 rounded">
                             {node.label}
                         </div>
 
