@@ -111,15 +111,14 @@ export default function ProcessFlowChart() {
         // ノード・ゾーンともに維持
     };
 
-    const circleHoverEnter = (nodeId: number) => {
+    const handleNodeEnter = (nodeId: number) => {
         if (hoveredNodeId !== nodeId) {
             setHoveredNodeId(nodeId);
         }
-        setIsHoveringNode(true);
     };
 
-    const circleHoverLeave = () => {
-        setIsHoveringNode(false);
+    const handleNodeLeave = () => {
+        // ホバー解除してもすぐには消さない方針なら処理を入れる
     };
 
     const isNodeInActiveZone = (node: NodeData, zone: typeof hoverZone | null) => {
@@ -281,82 +280,66 @@ export default function ProcessFlowChart() {
                         {hoverZone === "internal" && "社員の満足・定着・成長による人的資本循環"}
                     </div>
 
-                    {/* 説明ボックス（中央） */}
-                    {(hoverZone === "external" || hoverZone === "internal") && (
-                        <div
-                            className={`
-                    absolute
-                    ${hoverZone === "external" ? "top-[45%]" : ""}
-                    ${hoverZone === "internal" ? "top-[35%]" : ""}
-                    left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                    z-50 pointer-events-none
-                `}
-                        >
-                            <div className={`
-                    bg-slate-800/90 border
-                    ${hoverZone === "external" ? "border-blue-500" : "border-emerald-500"}
-                    rounded-lg shadow-md
-                    px-6 py-4 max-w-3xl w-[700px] h-[180px] relative
-                `}>
-                                {/* タイトル：ノード名 */}
-                                <div className={`absolute top-4 left-4 text-white text-lg font-semibold`}>
-                                    {hoveredNodeId
-                                        ? nodes.find(n => n.id === hoveredNodeId)?.label
-                                        : "項目を選択してください"}
-                                </div>
+                    {/* 説明ボックス内部 */}
+                    <div className={`absolute top-[${hoverZone === 'external' ? '45' : '35'}%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none`}>
+                        <div className={`
+        bg-slate-800/90 border
+        ${hoverZone === "external" ? "border-blue-500" : "border-emerald-500"}
+        rounded-lg shadow-md
+        px-6 py-4 max-w-3xl w-[700px] h-[180px] relative
+    `}>
+                            {/* タイトル */}
+                            <div className="absolute top-4 left-4 text-white text-lg font-semibold">
+                                {hoveredNodeId
+                                    ? nodes.find(n => n.id === hoveredNodeId)?.label
+                                    : "項目を選択してください"}
+                            </div>
 
-                                {/* 本文 */}
-                                <div className="mt-12 text-white text-left text-sm sm:text-base font-normal leading-relaxed overflow-auto">
-                                    {hoveredNodeId ? (
-                                        <div
-                                            dangerouslySetInnerHTML={{
-                                                __html: nodes.find(n => n.id === hoveredNodeId)?.description || ""
-                                            }}
-                                        />
-                                    ) : (
-                                        <p className="opacity-50">ホバーして詳細を表示</p>
-                                    )}
-                                </div>
+                            {/* 本文 */}
+                            <div className="mt-12 text-white text-left text-sm sm:text-base font-normal leading-relaxed overflow-auto">
+                                <div
+                                    dangerouslySetInnerHTML={{
+                                        __html: hoveredNodeId
+                                            ? nodes.find(n => n.id === hoveredNodeId)?.description || ""
+                                            : "<p class='opacity-50'>ホバーして詳細を表示</p>"
+                                    }}
+                                />
                             </div>
                         </div>
-                    )}
+                    </div>
                 </>
             )}
 
-            {/* ノード（点とラベル） */}
-            {nodes.map((node) => (
-                <div
-                    key={node.id}
-                    id={`node-${node.id}`}
-                    className={`absolute ${isNodeInActiveZone(node, hoverZone) ? 'z-50' : 'z-30'}`}
-                    style={{
-                        top: `${node.top}%`,
-                        left: `${node.left}%`,
-                        transform: 'translate(-50%, -50%)',
-                    }}
-                    onMouseEnter={() => circleHoverEnter(node.id)}
-                    onMouseLeave={circleHoverLeave}
-                >
-                    {/* ラベル（上または下に切り替え） */}
-                    <div
-                        className="text-sm mt-1 text-center text-gray-700 whitespace-nowrap z-10 font-semibold"
-                        style={{
-                            backgroundColor: 'white',
-                            padding: '2px 4px',
-                            borderRadius: '4px',
-                            display: 'inline-block'
-                        }}
-                    >
-                        {node.label}
-                    </div>
+            {/* ノード表示 */}
+            {nodes.map((node) => {
+                const isActive = isNodeInActiveZone(node, hoverZone);
+                const isHovered = hoveredNodeId === node.id;
+                const color = node.id <= 5 ? 'bg-blue-500' : 'bg-green-500';
 
-                    {/* 点 */}
+                return (
                     <div
-                        className={`w-3 h-3 rounded-full mx-auto mb-1 transition-all duration-200 ${node.id <= 5 ? 'bg-blue-500' : 'bg-green-500'} ${hoveredNodeId === node.id ? 'scale-150 ring-4 ring-white' : ''}`}
-                        style={{zIndex: 100}}
-                    />
-                </div>
-            ))}
+                        key={node.id}
+                        id={`node-${node.id}`}
+                        className={`absolute ${isActive ? 'z-50' : 'z-30'}`}
+                        style={{
+                            top: `${node.top}%`,
+                            left: `${node.left}%`,
+                            transform: 'translate(-50%, -50%)',
+                        }}
+                        onMouseEnter={() => handleNodeEnter(node.id)}
+                        onMouseLeave={handleNodeLeave}
+                    >
+                        <div className="text-sm mt-1 text-center text-gray-700 whitespace-nowrap z-10 font-semibold bg-white px-2 py-1 rounded">
+                            {node.label}
+                        </div>
+
+                        <div
+                            className={`w-3 h-3 rounded-full mx-auto mb-1 transition-all duration-200 ${color} ${isHovered ? 'scale-150 ring-4 ring-white' : ''}`}
+                            style={{zIndex: 100}}
+                        />
+                    </div>
+                );
+            })}
         </div>
     );
 }
