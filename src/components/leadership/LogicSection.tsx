@@ -38,7 +38,8 @@ const LogicSection: React.FC = () => (
             </div>
 
             <div className="mt-10">
-                <Link to="/column/logic">
+                <Link to="/services#model-overview">
+                    {/*<a href="#model-overview" className="text-indigo-600 hover:underline">*/}
                     <button className="px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
                         モデルの詳細をもっと見る
                     </button>

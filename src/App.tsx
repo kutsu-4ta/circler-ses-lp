@@ -1,4 +1,3 @@
-// App.tsx
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
@@ -15,11 +14,15 @@ import BelongingTheoryDetail from "./components/column/details/BelongingTheoryDe
 import RecruitmentValueDetail from "./components/column/details/RecruitmentValueDetail";
 import InternalVisionDetail from "./components/column/details/InternalVisionDetail";
 import ExternalFactorsDetail from "./components/column/details/ExternalFactorsDetail";
-import SelfMutualPublicAidDetail from "./components/column/details/SelfMutualPublicAidDetail";
+import SelfMutualPublicAidDetail from "./components/column/details/ProposalStructureDetail";
 import InternalBrandingDetail from "./components/column/details/InternalBrandingDetail";
 import WillCanMustDetail from "./components/column/details/WillCanMustDetail";
 import SelfEfficacyDetail from "./components/column/details/SelfEfficacyDetail";
 import CollectiveEfficacyDetail from "./components/column/details/CollectiveEfficacyDetail";
+import ScrollToTop from "./components/ScrollToTop";
+import ValueDefinitionDetail from "./components/column/details/ValueDefinitionDetail";
+import BelongingAndGrowthDetail from "./components/column/details/BelongingAndGrowthDetail";
+import ProposalStructureDetail from "./components/column/details/ProposalStructureDetail";
 
 function Container({children}: { children: React.ReactNode }) {
     return (
@@ -47,6 +50,7 @@ export default function App() {
             <div className="min-h-screen flex flex-col">
                 <Nav/>
                 <main className="flex-grow bg-white">
+                        <ScrollToTop />
                     <Routes>
                         <Route path="/" element={<HomePage/>}/>
                         <Route path="/members" element={<MemberPage/>}/>
@@ -67,6 +71,9 @@ export default function App() {
                         <Route path="/column/collective-efficacy" element={<CollectiveEfficacyDetail />} />
                         <Route path="/column/internal-branding" element={<InternalBrandingDetail />} />
                         <Route path="/column/will-can-must" element={<WillCanMustDetail />} />
+                        <Route path="/column/value-definition" element={<ValueDefinitionDetail/>} />
+                        <Route path={"/column/belonging-and-growth"} element={<BelongingAndGrowthDetail/>}/>
+                        <Route path={"/column/proposal-structure"} element={<ProposalStructureDetail/>}/>
                     </Routes>
                 </main>
                 <Footer/>

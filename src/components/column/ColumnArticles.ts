@@ -6,8 +6,12 @@ import {internalVisionMeta} from "./details/InternalVisionDetail";
 import {motivationTheoryMeta} from "./details/MotivationTheoryDetail";
 import {recruitmentValueMeta} from "./details/RecruitmentValueDetail";
 import {selfEfficacyMeta} from "./details/SelfEfficacyDetail";
-import {selfMutualPublicAidMeta} from "./details/SelfMutualPublicAidDetail";
 import {willCanMustMeta} from "./details/WillCanMustDetail";
+import {valueDefinitionMeta} from "./details/ValueDefinitionDetail";
+import {belongingAndGrowthMeta} from "./details/BelongingAndGrowthDetail";
+import {proposalStructureDetailMeta} from "./details/ProposalStructureDetail";
+import {selfMutualPublicAidMeta} from "./details/SelfMutualPublicAidDetail";
+
 
 export const columnArticles = [
     {
@@ -55,6 +59,17 @@ export const columnArticles = [
         description:
             "社員と会社の意志・能力・期待の重なりから目標をつくるフレームワークの実践例を紹介します。",
     },
-
+    {
+        ...valueDefinitionMeta,
+        description: "価格ではなく“自社の定義”で価値を決める。人材育成・ブランディング・経営判断をつなぐ視点を紹介します。",
+    },
+    {
+        ...belongingAndGrowthMeta,
+        description: "現場の先輩に憧れながらも、自社にその姿を重ねられない。SEが感じる“帰属と成長のズレ”を見つめ直し、組織が希望を与える仕組みを考えます。"
+    },
+    {
+        ...proposalStructureDetailMeta,
+        description: "営業担当者の経験と感覚に依存した提案は、再現性と効率性の観点から限界を迎えています。本記事では、構造的な育成戦略と連動した営業モデルによって、営業コスト削減と満足度向上を両立させる方法を解説します。"
+    },
     // 他の記事をここに追加
 ];

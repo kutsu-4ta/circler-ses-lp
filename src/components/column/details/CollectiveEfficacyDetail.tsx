@@ -5,7 +5,7 @@ export const collectiveEfficacyMeta = {
     title: "組織効力感という“空気”を育てるには",
     author: "山下 将史",
     date: "2025年6月16日",
-    category: "組織開発",
+    category: "組織開発・マネジメント",
     tags: [
         "帰属意識",
         "自己効力感",

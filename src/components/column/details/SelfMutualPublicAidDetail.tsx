@@ -5,7 +5,7 @@ export const selfMutualPublicAidMeta = {
     title: "自助・共助・公助で組織は循環する",
     author: "山下 将史",
     date: "2025年6月16日",
-    category: "組織開発",
+    category: "組織開発・マネジメント",
     tags: [
         "社員エンゲージメント",
         "自助共助公助",

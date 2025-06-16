@@ -5,7 +5,7 @@ export const belongingTheoryMeta = {
     title: "帰属意識と納得感の構造",
     author: "山下 将史",
     date: "2025年6月16日",
-    category: "組織開発",
+    category: "組織開発・マネジメント",
     tags: [
         "帰属意識",
         "納得感",
