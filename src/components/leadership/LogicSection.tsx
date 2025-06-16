@@ -1,50 +1,70 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const items = [
+    {
+        title: '“単価＝価値”からの脱却',
+        text: `人材の価値が「いくらで売れたか」で決まる。<br/>
+そんなSES特有の構造に対し、本戦略では<b>自社が価値を定義し、再定義する</b>という営みを組み込んでいます。<br/>
+現場成果を「価値」として言語化・蓄積し、報酬や評価基準と接続させることで、<br/>
+単価に依存しない人的資本経営の基盤を構築します。`,
+        img: '/images/value-definition.png',
+        reverse: false
+    },
+    {
+        title: '“あの先輩が自社の人だったら”をなくす',
+        text: `SESでは現場にしか目標とする先輩がいない、という状況が生まれやすく、<br/>
+高い成長意欲を持つSEほど、キャリアの展望が自社に描けず孤立していきます。<br/>
+本戦略は、<b>SEが現場で得た学びを社内に還元できる仕組み</b>を整備し、<br/>
+成長と帰属の断絶を埋めていきます。`,
+        img: '/images/coworker.png',
+        reverse: true
+    },
+    {
+        title: '“経験則だけ”の営業から構造へ',
+        text: `営業の提案が感覚と経験に頼り切っている状態では、組織的な成長は望めません。<br/>
+本戦略では、<b>SEの内省と主任との1on1を通じて価値を可視化</b>し、<br/>
+営業がそれを顧客に適切に翻訳・提案するという役割分担により、<br/>
+属人化を防ぎながら個別対応の質を維持しています。`,
+        img: '/images/sales-power.png',
+        reverse: false
+    }
+];
 
 const LogicSection: React.FC = () => (
-    <section className="py-16 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-indigo-800 mb-6">
+    <section className="py-24 px-6 bg-indigo-50">
+        <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold text-indigo-800 text-center mb-20 leading-snug">
                 “育成”と“ビジネス”をつなげる。<br />
-                SEの価値を循環させるモデル。
+                SEの価値を循環させる、誠実な戦略モデル。
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-10">
-                SEの強みが現場で終わるのではなく、提案につながり、評価につながり、文化になる。<br />
-                サーキュラーSESは、「人的資本」としてのSEを循環させるための仕組みです。
-            </p>
 
-            <div className="grid sm:grid-cols-3 gap-6 text-left">
-                {[
-                    {
-                        title: '🧭 内省と発信で価値を可視化',
-                        desc: '1on1や社内ブログで、SE一人ひとりの“らしさ”や“強み”を言語化・発信します。',
-                    },
-                    {
-                        title: '📦 提案・マッチングに転換',
-                        desc: '強みをSalesforceや営業資料に翻訳し、「誰をなぜ提案するか」が明確になります。',
-                    },
-                    {
-                        title: '💡 評価・文化・報酬へ循環',
-                        desc: '現場成果が社内に還元され、評価・昇格・文化的報酬へと繋がる構造をつくります。',
-                    },
-                ].map((item, i) => (
-                    <div
-                        key={i}
-                        className="bg-indigo-50 rounded-xl shadow-sm p-6 border border-indigo-100"
-                    >
-                        <h3 className="text-xl font-semibold text-indigo-700 mb-2">{item.title}</h3>
-                        <p className="text-gray-700">{item.desc}</p>
+            {items.map((item, index) => (
+                <motion.div
+                    key={index}
+                    className={`mb-24 flex flex-col md:flex-row items-center ${item.reverse ? 'md:flex-row-reverse' : ''}`}
+                    initial={{ opacity: 0, x: item.reverse ? 100 : -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                >
+                    <div className="w-full md:w-2/3 p-16">
+                        <img src={item.img} alt="image" className="w-full h-auto" />
                     </div>
-                ))}
-            </div>
-
-            <div className="mt-10">
-                <Link to="/services#model-overview">
-                    {/*<a href="#model-overview" className="text-indigo-600 hover:underline">*/}
-                    <button className="px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
-                        モデルの詳細をもっと見る
-                    </button>
-                </Link>
-            </div>
+                    <div className="w-full md:w-1/2 p-6">
+                        <h3 className="text-2xl font-semibold text-indigo-700 mb-4">{item.title}</h3>
+                        <p
+                            className="text-lg text-gray-700 leading-relaxed mb-6"
+                            dangerouslySetInnerHTML={{ __html: item.text }}
+                        />
+                        <Link to="/services">
+                            <button className="px-6 py-2 bg-indigo-600 text-white text-sm font-medium rounded-full hover:bg-indigo-700 transition">
+                                モデルの詳細を見る
+                            </button>
+                        </Link>
+                    </div>
+                </motion.div>
+            ))}
         </div>
     </section>
 );
