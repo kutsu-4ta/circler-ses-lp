@@ -5,7 +5,7 @@ export const internalBrandingMeta = {
     title: "社内ブランディングは“文化資本”から始まる",
     author: "山下 将史",
     date: "2025年6月16日",
-    category: "組織文化",
+    category: "マーケティング",
     tags: [
         "社内ブランディング",
         "文化資本",

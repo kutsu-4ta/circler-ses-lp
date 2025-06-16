@@ -5,7 +5,7 @@ export const willCanMustMeta = {
     title: "Will・Can・Mustを使った目標設計論",
     author: "山下 将史",
     date: "2025年6月16日",
-    category: "育成設計",
+    category: "マネジメント",
     tags: [
         "Will・Can・Must",
         "キャリア支援",

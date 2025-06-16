@@ -4,7 +4,7 @@ export const motivationTheoryMeta = {
     title: "モチベーション理論と組織設計",
     author: "山下 将史",
     date: "2025年6月16日",
-    category: "人事",
+    category: "組織開発",
     tags: [
         "モチベーション",
         "自己決定理論",

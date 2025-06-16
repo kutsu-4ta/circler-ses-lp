@@ -3,7 +3,7 @@ import ColumnLayout from "../ColumnLayout";
 export const externalFactorsMeta = {
     id: "external-factors",
     title: "社会の変化と人的資本経営",
-    category: "人事",
+    category: "経営戦略",
     tags: [
         "キャリア自律",
         "社会背景",

@@ -5,7 +5,7 @@ export const recruitmentValueMeta = {
     title: "採用戦略に「意味」を持たせる",
     author: "山下 将史",
     date: "2025年6月16日",
-    category: "採用戦略",
+    category: "マーケティング",
     tags: [
         "カルチャーフィット",
         "MVV",

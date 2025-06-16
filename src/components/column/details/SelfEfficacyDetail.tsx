@@ -5,7 +5,7 @@ export const selfEfficacyMeta = {
     title: "自己効力感が人を育てる組織のエンジン",
     author: "山下 将史",
     date: "2025年6月16日",
-    category: "育成",
+    category: "組織開発",
     tags: [
         "自己効力感",
         "組織効力感",
