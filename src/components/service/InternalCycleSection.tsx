@@ -47,7 +47,7 @@ const InternalCycleSection: React.FC = () => (
                     },
                 ].map((item, i) => (
                     <div key={i} className="relative">
-                        {/* セリフパート（上に浮かせる） */}
+                        {/* セリフパート */}
                         <div className="mb-4 px-4 py-3 rounded-lg bg-emerald-100 text-emerald-800 text-sm font-medium shadow border border-emerald-200">
                             {item.quote}
                         </div>
@@ -59,8 +59,6 @@ const InternalCycleSection: React.FC = () => (
                                 <h3 className="text-xl font-semibold text-emerald-700 mt-1 mb-3">{item.title}</h3>
                                 <p className="text-gray-700">{item.desc}</p>
                             </div>
-
-                            {/* CTA */}
                             <div className="mt-6">
                                 <Link
                                     to={item.to}
@@ -74,8 +72,21 @@ const InternalCycleSection: React.FC = () => (
                 ))}
             </div>
 
-            <div>
-                <p>TDO: 成長スタイルPPM</p>
+            {/* ポートフォリオの説明 */}
+            <div className="mt-20 mb-20">
+                <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-3xl mx-auto">
+                    本人の志向や帰属意識の因子をベースに人材ポートフォリオとして整理します。<br />
+                    自社の顧客ポートフォリオと照合することで、最適なマッチングを実現します。<br />
+                    これにより、<b>本人のペースに合った育成シナリオ</b>を描くことができ、<br />
+                    会社との関係性の中で、<b>「この場所で成長していける」という実感</b>を育てることができます。
+                </p>
+                <div className="flex justify-center my-8">
+                    <img
+                        src="/column/companion-ppm.png"
+                        alt="人材ポートフォリオ"
+                        className="max-w-full h-auto rounded "
+                    />
+                </div>
             </div>
 
             {/* 全体CTA */}
@@ -87,6 +98,16 @@ const InternalCycleSection: React.FC = () => (
                     社内循環を支える機能一覧を見る
                 </Link>
             </div>
+
+            {/* セクションブリッジ文 */}
+            <p className="text-lg text-gray-700 leading-relaxed mt-16 max-w-3xl mx-auto">
+                「いやいや、そんな都合よくマッチングなんかできるわけないでしょ」<br />
+                その疑念、もっともです。<br />
+                現場の多様さや人の複雑さを、たった一つの仕組みで“きれいに整理”なんてできるわけがない。<br />
+                でも、だからこそ私たちは<b>それを現実的に実現するための仕掛け</b>を用意しています。<br />
+                次にご紹介するのは、マーケティングとSalesforceを活用した<b>社内外の価値をつなぐ“翻訳装置”</b>の全体像です。
+            </p>
+
         </div>
     </section>
 );

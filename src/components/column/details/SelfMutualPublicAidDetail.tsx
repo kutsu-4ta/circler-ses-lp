@@ -32,7 +32,7 @@ const SelfMutualPublicAidDetail: React.FC = () => (
             <img
                 src="/column/self-mutual-public.png"
                 alt="自助共助公助"
-                className="max-w-full h-auto rounded shadow-md"
+                className="max-w-full h-auto rounded "
             />
         </div>
 

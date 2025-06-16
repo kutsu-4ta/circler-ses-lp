@@ -50,7 +50,7 @@ const MotivationTheoryDetail: React.FC = () => (
             <img
                 src="/column/motivation-seory-vs-ses.png"
                 alt="モチベーションと報酬"
-                className="max-w-full h-auto rounded shadow-md"
+                className="max-w-full h-auto rounded "
             />
         </div>
 

@@ -36,7 +36,7 @@ const BelongingTheoryDetail: React.FC = () => (
             <img
                 src="/column/belonging-theory.png"
                 alt="帰属意識の4因子"
-                className="max-w-full h-auto rounded shadow-md"
+                className="max-w-full h-auto rounded "
             />
         </div>
 
@@ -69,7 +69,7 @@ const BelongingTheoryDetail: React.FC = () => (
             <img
                 src="/column/career-safety.png"
                 alt="キャリア安全性"
-                className="max-w-full h-auto rounded shadow-md"
+                className="max-w-full h-auto rounded "
             />
         </div>
 
@@ -101,7 +101,7 @@ const BelongingTheoryDetail: React.FC = () => (
             <img
                 src="/column/career-safety2.png"
                 alt="キャリア安全性2"
-                className="max-w-full h-auto rounded shadow-md"
+                className="max-w-full h-auto rounded "
             />
         </div>
 

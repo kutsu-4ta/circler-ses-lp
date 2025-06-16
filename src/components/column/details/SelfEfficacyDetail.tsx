@@ -48,7 +48,7 @@ const SelfEfficacyDetail: React.FC = () => (
             <img
                 src="/column/self-efficacy.png"
                 alt="自己効力感"
-                className="max-w-full h-auto rounded shadow-md"
+                className="max-w-full h-auto rounded "
             />
         </div>
 
